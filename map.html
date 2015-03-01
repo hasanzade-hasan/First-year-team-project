@@ -11,19 +11,73 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
-		
-  
-  
-  <script>
 
-  </script>
+		<style>
+			* {
+			  margin: auto;
+			  padding: 0;
+			  box-sizing: border-box;
+			}
+
+			table {
+			  color: #333;
+			  font-family: sans-serif;
+			  font-size: .9em;
+			  font-weight: 300;
+			  text-align: left;
+			  line-height: 50px;
+			  border-spacing: 0;
+			  border: 1px solid #428bca;
+			  width: 1000px;
+			  margin: 20px auto;
+			}
+
+			thead tr:first-child {
+			  background: #428bca;
+			  color: #fffaaa;
+			  border: none;
+			}
+
+			th {font-weight: bold;}
+			th:first-child, td:first-child {padding: 0 15px 0 20px;}
+
+			thead tr:last-child th {border-bottom: 2px solid #ddd;}
+
+			tbody tr:hover {background-color: #f0fbff;}
+			tbody tr:last-child td {border: none;}
+			tbody td {border-bottom: 1px solid #ddd;}
+
+			td:last-child {
+			  text-align: right;
+			  padding-right: 10px;
+			}
+
+			.button {
+			  color: #428bca;
+			  text-align: center;
+			  text-decoration: none;
+			  padding-left: 15px;
+			}
+
+			.button:hover {
+			  text-decoration: underline;
+			  cursor: pointer;
+			}
+		</style>
+
+	  <script>
+   	</script>
+
 		<noscript>
-			
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
 		</noscript>
+
+
+
 	</head>
+
 	<body id="top">
 
 		<!-- Header -->
@@ -34,8 +88,7 @@
 						<li><a href="index.html">Home</a></li>
 						<li><a href="map.html">Healthy Manchester Map</a></li>
 						<li><a href="faq.html">FAQ</a></li>
-						<li><a href="contact.html">Cntact</a></li>
-						
+						<li><a href="contact.html">Contact</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -45,27 +98,43 @@
 			<section id="one" class="wrapper style1">
 				<header class="major">
 					<h2>MAP</h2>
-				</header>
-				<div id = "main">
-					<div id="box">
-						
-						<img src="images/salad.jpg" width ="100%">
-						<h3>RECIEPES</h3>
-						<p>Nullam quis eleifend lectus. Suspendisse et lacus placerat, suscipit erat id, ullamcorper nisl. Maecenas gravida dictum fringilla. Phasellus lobortis, felis id accumsan condimentum, magna erat malesuada ligula, quis egestas urna nisl nec velit. Etiam at metus sit amet ex feugiat tincidunt.</p>
+					<div id = "map">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d9497.331844758186!2d-2.2394708613769536!3d53.480380344677535!3m2!1i1024!2i768!4f13.1!2m1!1sgyms+in+manchester!5e0!3m2!1sen!2suk!4v1425048709036" width="800" height="450" frameborder="0" style="border:0"></iframe>				
 					</div>
-					<div id="box">
-						<img src="images/work.jpg" width ="100%">
-						<h3>EXERCISES</h3>
-						<p>Nullam quis eleifend lectus. Suspendisse et lacus placerat, suscipit erat id, ullamcorper nisl. Maecenas gravida dictum fringilla. Phasellus lobortis, felis id accumsan condimentum, magna erat malesuada ligula, quis egestas urna nisl nec velit. Etiam at metus sit amet ex feugiat tincidunt.</p>
-						</div>
-					<div id="box">
-						<img src="images/diet.jpg" width ="100%">
-						<h3>A PERSONAL CALENDAR</h3>
-						<p>Nullam quis eleifend lectus. Suspendisse et lacus placerat, suscipit erat id, ullamcorper nisl. Maecenas gravida dictum fringilla. Phasellus lobortis, felis id accumsan condimentum, magna erat malesuada ligula, quis egestas urna nisl nec velit. Etiam at metus sit amet ex feugiat tincidunt.</p>
-					</div>
-		
-				</div>
-			</section>
+
+					
+						<table>
+						  <thead>
+						    <tr><th colspan="3">Some facilities here</th></tr>
+						    <!--<tr>
+						      <th>#</th>
+						      <th colspan="2">Names</th>
+						    </tr>-->
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td>1</td>
+						      <td>Gym number 1</td>
+						      <td>
+						        <a href= "#" class="button">Find on map or go to website</a>
+						    </tr>
+						    <tr>
+						      <td>2</td>
+						      <td>Gym number 2</td>
+						      <td>
+						        <a href="#" class="button">Find on map or go to website</a>
+						      </td>
+						    </tr>
+						    <tr>
+						      <td>3</td>
+						      <td>Gym number 3</td>
+						      <td>
+						        <a href="#" class="button">Find on map or go to website</a>
+						      </td>
+						    </tr>
+						  </tbody>
+						</table>
+
 			<!-- Footer -->
 			<footer id="footer">
 				<div class="container">
@@ -74,16 +143,15 @@
 						<li>Design: Z4 </li>
 						<li>Images: blabla.com </li>
 						<li>
-						<ul class="icons">
+							<ul class="icons">
 								<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 								<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 								<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-								
 							</ul>
 						</li>
 					</ul>
 				</div>
-				
+
 			</footer>
 
 	</body>
