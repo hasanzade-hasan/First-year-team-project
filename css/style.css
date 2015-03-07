@@ -437,6 +437,12 @@
 
 		table td {
 			padding: 0.75em 0.75em;
+			vertical-align: top;
+			text-align: center;
+		}
+		
+		table td img {
+			width: 100%;
 		}
 
 		table th {
@@ -1266,4 +1272,10 @@ border: 0;
 	margin-right: 3em;
 	background-color: white; 
 	margin-top: 2em;
+}
+/*recipes and exercises*/
+.contentCell{
+	width: 33%;
+	height: 20%;
+	overflow: hidden;
 }
