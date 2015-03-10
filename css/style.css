@@ -442,7 +442,9 @@
 		}
 		
 		table td img {
-			width: 100%;
+			border: solid 2px black;
+			width: 50%;
+			margin: 0;
 		}
 
 		table th {
@@ -1279,3 +1281,23 @@ border: 0;
 	height: 20%;
 	overflow: hidden;
 }
+
+.contentTableHead{
+	background-color: rgba(183,222,237,1);
+}
+
+.addCalculatorForm{
+	padding: 0;
+	border-radius: 2em;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.addCalculatorForm input[type="button"]{
+	background-color: black;
+	width : 100%;
+}
+	.addCalculatorForm input[type="button"]:hover{
+	background-color: rgba(183,222,237,1);
+	}
