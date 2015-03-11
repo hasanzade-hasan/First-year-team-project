@@ -1,3 +1,8 @@
+<?
+include "./config/config.php";
+include "./config/connect.php";
+include "./config/query.php";
+?>
 <!DOCTYPE HTML>
 
 <html>
@@ -11,6 +16,7 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
+		<script src="js/ajax.js"></script>
 		
   
   
@@ -49,10 +55,11 @@
 						<li><span href="#" class="button big special" id="toggle-login">Log in</span> <div id="login">
 							<div id="triangle"></div>
 							<h1>Log in</h1>
-							<form>
-								<input type="email" placeholder="Email" />
-								<input type="password" placeholder="Password" />
-								<input type="submit" value="Log in" />
+							<form name='frm_login' method="POST" action="<?=$_SERVER['PHP_SELF']?>" onSubmit="javascript:login();return false;" >
+							<input type="hidden" name="mode" value="login">
+								<input type="email" name="email" placeholder="Email" />
+								<input type="password" name="pass" placeholder="Password" />
+								<input type="submit" value="Log in"/>
 							</form>
 							</div>
 							<script src="js/index.js"></script>
@@ -61,35 +68,31 @@
 						<div id="signup">
 							<div id="triangle"></div>
 								<h1>Sig up</h1>
-								<form>
+								<form name='frm_regist' method="POST" action="<?=$_SERVER['PHP_SELF']?>" onSubmit="javascript:regist();return false;">
+								<input type="hidden" name="mode" value="regist">
 									<ul>
-										<li> <input type="text" placeholder="Name" /> </li>
-										<li> <input type="text" placeholder="Surname" /> </li>
+										<li> <input type="text" placeholder="Name" name="rname" /> </li>
+										<li> <input type="text" placeholder="Surname" name="surname" /> </li>
 									</ul>
 									<ul>
-										<li> <input type="email" placeholder="Email" /> </li>
-										<li> <select type = "input">
+										<li> <input type="email" placeholder="Email" name="email" /> </li>
+										<li> <select type = "input" name="gender">
 												<option value="">- GENDER -</option>
-												<option value="">Male</option>
-												<option value="">Female</option>
+												<option value="0">Male</option>
+												<option value="1">Female</option>
 											     </select> </li>
 									</ul>
 									<ul >
-										<li> <input type="text" placeholder="wwight" /> </li>
-										<li> <input type="text" placeholder="height" /> </li>
+										<li> <input type="text" placeholder="weight" name="weight" /> </li>
+										<li> <input type="text" placeholder="height" name="height" /> </li>
 									</ul>
 									<ul>
-										<li> <input type="password" placeholder="Password" /> </li>
-										<li> <input type="password" placeholder="Confirm Password" /> </li>
+										<li> <input type="password" placeholder="Password" name="pass1" /> </li>
+										<li> <input type="password" placeholder="Confirm Password" name="pass2" /> </li>
 									</ul>
 									<br>
-									
-									 
-	          							
 									<br>
-										<input type="submit" value="Sign up" />
-										
-										
+									<input type="submit" value="Sign up" />										
 								</form>
 						</div>
 						<script src="js/index2.js"></script>
@@ -142,6 +145,56 @@
 				</div>
 				
 			</footer>
+			<script type="text/javascript">
+				function login(){
+					var email = document.frm_login.email.value;
+					var pass = document.frm_login.pass.value;
+					var mode = document.frm_login.mode.value;
+					sendRequest(
+						login_result, '&email='+ email + '&pass=' + pass + '&mode=' + mode,
+						'POST',
+						'./member.php', true, true
+					);
+				}
 
+				function login_result(oj){
+					var res = decodeURIComponent(oj.responseText);
+					if ( res == "login_ok" ) {
+						location.href="./myprofile.html";
+					}else {
+						//alert(res);
+						return false;
+					}
+				}
+
+				function regist(){
+					var email = document.frm_regist.email.value;
+					var rname = document.frm_regist.rname.value;
+					var surname = document.frm_regist.surname.value;
+					var gender = document.frm_regist.gender.value;
+					var weight = document.frm_regist.weight.value;
+					var height = document.frm_regist.height.value;
+					var pass1 = document.frm_regist.pass1.value;
+					var pass2 = document.frm_regist.pass2.value;
+					var mode = document.frm_regist.mode.value;
+					sendRequest(
+						regist_result, '&email='+ email + '&pass1=' + pass1 + '&pass2=' + pass2 + '&mode=' + mode + '&rname=' + rname + '&surname=' + surname + '&gender=' + gender + '&weight=' + weight + '&height=' + height + '&mode=' + mode,
+						'POST',
+						'./member.php', true, true
+					);
+				}
+
+				function regist_result(oj){
+					var res = decodeURIComponent(oj.responseText);
+
+					if ( res == "regist_ok" ) {
+						alert("Join successfully completed");
+						location.href="./myprofile.html";
+					}else {
+						alert(res);
+						return false;
+					}
+				}	
+			</script>
 	</body>
 </html>
