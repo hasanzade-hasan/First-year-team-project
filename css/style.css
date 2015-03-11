@@ -442,9 +442,7 @@
 		}
 		
 		table td img {
-			border: solid 2px black;
-			width: 50%;
-			margin: 0;
+			width: 100%;
 		}
 
 		table th {
@@ -566,6 +564,9 @@
 		input[type="button"].small,
 		.button.small {
 			font-size: 0.7em;
+			margin-top: 7px;
+			background-color: #629DD1;
+			font-weight: 400;
 		}
 
 		input[type="submit"].big,
@@ -575,6 +576,7 @@
 			font-size: 1.2em;
 			height: 2.65em;
 			line-height: 2.65em;
+
 		}
 
 		input[type="submit"].alt,
@@ -642,6 +644,7 @@
 			cursor: default;
 			opacity: 0.25;
 		}
+
 
 /* Wrapper */
 
@@ -924,7 +927,7 @@
   width:0;
   border-top:12x solid transparent;
   border-right:12px solid transparent;
-  border-bottom:12px solid #3399cc;
+  border-bottom:12px solid #629DD1;
   border-left:12px solid transparent;
   margin:0 auto;
 }
@@ -1064,7 +1067,7 @@ input[type="submit"]:hover{
   margin: 0;
   padding: 0;
   border: 0;
-  
+  font-size: 1em;
   list-style: none;
   line-height: 1;
   display: block;
@@ -1072,7 +1075,7 @@ input[type="submit"]:hover{
   
 }
 #cssmenu {
-  width: 97%;
+  width: 82em;
   margin-right: auto;
   margin-left: auto;
   margin-top: 0px;
@@ -1173,8 +1176,8 @@ background: -o-linear-gradient(top, rgba(98,157,209,1) 0%, rgba(98,157,209,1) 7%
 background: -ms-linear-gradient(top, rgba(98,157,209,1) 0%, rgba(98,157,209,1) 7%, rgba(183,222,237,1) 100%);
 background: linear-gradient(to bottom, rgba(98,157,209,1) 0%, rgba(98,157,209,1) 7%, rgba(183,222,237,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#629dd1', endColorstr='#b7deed', GradientType=0 );
-width: 97%;
-height: 100%;
+width: 82em;
+height: 35em;
 margin-right: auto;
 margin-left: auto;
 margin-top: 0;
@@ -1190,26 +1193,34 @@ border: 0;
 	float:left;
 	height: 100%;
 	width: 20em;
-	border:solid;
-	border-color: black;
+	border: 1px #657172 solid;
+
+-moz-box-shadow: 6px -2px 6px 0px #888888;
+-webkit-box-shadow: 6px -2px 6px 0px #888888;
+box-shadow: 6px -2px 6px 0px #888888;
 	margin-left: 2em;
 	margin-top: 2em;
-	background: white;
+	background: #c2dadb;
 	padding: 0.4em;
 }
 
 #details h1{
 	color:black;
 	padding: 1em;
+	font-weight: 300;
+
+	font-size: 1em;
+
 }
 
 #details ul > li{
 	text-align:left;
 	padding-top:2em;
+	padding-bottom: 0;
 }
 
-#details input[type = "text"] {
-  width: 17em;
+#details input[type ="text"] {
+  width: 12em;
   background:#fff;
   margin-bottom: 2em;
   border:1px solid #ccc;
@@ -1217,13 +1228,13 @@ border: 0;
   font-size:95%;
   color:#555;
   padding:0.5em;
-  padding-right: 1em;
+  padding-right:0;
   
-  margin-top: 1em;
+  margin-top: 0;
   float:left;
 }
 
-#details input[type="submit"]{
+#details input[type="button"]{
 
   width:50%;
   background:#629DD1;
@@ -1246,18 +1257,38 @@ border: 0;
 	width: 23em;
 	height:17em;
 	border-color: #99FFCC;
-	border-width: 1px;
-	border-style: solid;
+	border: 1px #657172 solid;
+
+-moz-box-shadow: 6px -2px 6px 0px #888888;
+-webkit-box-shadow: 6px -2px 6px 0px #888888;
+box-shadow: 6px -2px 6px 0px #888888;
 	border-radius: 0.5em;
 	
 	text-align: center;
 	margin-right: 3em;
-	background-color: white; 
+	background: #c2dadb;
 	margin-top: 2em;
+}
+#box2 h1{
+	color:black;
+	padding: 1em;
+	font-weight: 300;
+	font-size: 1em;
+
+}
+
+#box3 h1{
+	color:black;
+	padding: 1em;
+	font-weight: 300;
+    padding-bottom: 0;
+	font-size: 1em;
+
 }
 #box3 ul > li{
 	text-align:left;
-	padding-top:2em;
+	padding-top:0;
+	padding-bottom: 2em;
 }
 
 #box3{
@@ -1266,15 +1297,20 @@ border: 0;
 	width: 23em;
 	height:17em;
 	border-color: #99FFCC;
-	border-width: 1px;
-	border-style: solid;
+	border: 1px #657172 solid;
+    padding:1em;
+-moz-box-shadow: 6px -2px 6px 0px #888888;
+-webkit-box-shadow: 6px -2px 6px 0px #888888;
+box-shadow: 6px -2px 6px 0px #888888;
 	border-radius: 0.5em;
-	
+	padding-bottom: 0;
 	text-align: center;
 	margin-right: 3em;
-	background-color: white; 
+	background: #c2dadb; 
 	margin-top: 2em;
 }
+
+
 /*recipes and exercises*/
 .contentCell{
 	width: 33%;
@@ -1301,3 +1337,84 @@ border: 0;
 	.addCalculatorForm input[type="button"]:hover{
 	background-color: rgba(183,222,237,1);
 	}
+
+#listfoods{
+	float:left;
+	height: 30em;
+	width: 25em;
+	
+	border-color: black;
+	margin-left: 12em;
+	margin-top: 2em;
+	background: #c2dadb;
+	padding: 0.4em;
+	overflow: scroll;
+	border-radius: 0.3em;
+	border: 1px #657172 solid;
+
+-moz-box-shadow: 6px -2px 6px 0px #888888;
+-webkit-box-shadow: 6px -2px 6px 0px #888888;
+box-shadow: 6px -2px 6px 0px #888888;
+}
+
+#listfoods h1{
+	color:black;
+	padding: 1em;
+	font-weight: 300;
+
+	font-size: 1em;
+}
+
+#calculator{
+	float:right;
+	height: 30em;
+	width: 25em;
+	
+    border-radius: 0.3em;
+	margin-right: 12em;
+	margin-top: 2em;
+	background: #c2dadb;
+	padding: 0.4em;
+	border: 1px #657172 solid;
+
+-moz-box-shadow: 6px -2px 6px 0px #888888;
+-webkit-box-shadow: 6px -2px 6px 0px #888888;
+box-shadow: 6px -2px 6px 0px #888888;
+}
+
+#calculator h1{
+	color:black;
+	padding: 1em;
+	font-weight: 300;
+
+	font-size: 1em;
+}
+
+#calcfood{
+	width: 100%;
+	overflow: scroll;
+	height:65%;
+	background: #c2dadb;
+	margin:0;
+}
+
+#total{
+	width:100%;
+	background: #c2dadb;
+	height:10%;
+	margin:0;
+	padding:0.5em;
+}
+
+#total p{
+	text-align: left;
+	font-weight: 400;
+	color:black;
+}
+
+#content select{
+float:middle;
+margin-top:0.3em;
+}
+
+
