@@ -1419,4 +1419,8 @@ float:middle;
 margin-top:0.3em;
 }
 
+#logout{
+	float:right;
+	margin-right: 2em;
+}
 
