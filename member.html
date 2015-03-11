@@ -13,7 +13,7 @@ if ($mode == "regist" ) {
 			echo "Email is already subscribed";
 		}else {		
 			$sql = "insert into User set Email = '$email' , Name = '$rname' , Surname = '$surname' , Gender = '$gender' , Weight = '$weight' , Height = '$height' , Password = '" . md5( $pass1 ) . "' ";
-			$res = mysql_query($sql);
+			$res = mysqli_query($sql);
 			if ($res) {
 				$user_info = getdata("select * from User where Email='$email' ");
 				$_SESSION["sn_idx"] = $user_info["UserID"];
