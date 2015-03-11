@@ -9,7 +9,7 @@ if ($mode == "regist" ) {
 		echo "failure password matching";	
 	}else {
 		$user_dist = getdata("select count(*) as cnt from User where Email='$email' ", $conn);
-		if ($user_dist[cnt] > 0 ) {
+		if ($user_dist["cnt"] > 0 ) {
 			echo "Email is already subscribed";
 		}else {		
 			$sql = "insert into User set Email = '$email' , Name = '$rname' , Surname = '$surname' , Gender = '$gender' , Weight = '$weight' , Height = '$height' , Password = '" . md5( $pass1 ) . "' ";
