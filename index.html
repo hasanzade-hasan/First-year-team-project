@@ -153,7 +153,7 @@ include "./config/query.php";
 					sendRequest(
 						login_result, '&email='+ email + '&pass=' + pass + '&mode=' + mode,
 						'POST',
-						'./member.html', true, true
+						'./member.php', true, true
 					);
 				}
 
@@ -180,7 +180,7 @@ include "./config/query.php";
 					sendRequest(
 						regist_result, '&email='+ email + '&pass1=' + pass1 + '&pass2=' + pass2 + '&mode=' + mode + '&rname=' + rname + '&surname=' + surname + '&gender=' + gender + '&weight=' + weight + '&height=' + height + '&mode=' + mode,
 						'POST',
-						'./member.html', true, true
+						'./member.php', true, true
 					);
 				}
 
