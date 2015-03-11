@@ -1322,7 +1322,7 @@ box-shadow: 6px -2px 6px 0px #888888;
 	background-color: rgba(183,222,237,1);
 }
 
-.addCalculatorForm{
+.addCalendarForm{
 	padding: 0;
 	border-radius: 2em;
 	width: 50%;
@@ -1330,13 +1330,15 @@ box-shadow: 6px -2px 6px 0px #888888;
 	margin-right: auto;
 }
 
-.addCalculatorForm input[type="button"]{
+.addCalendarForm input[type="button"]{
 	background-color: black;
 	width : 100%;
 }
 	.addCalculatorForm input[type="button"]:hover{
 	background-color: rgba(183,222,237,1);
 	}
+
+/**/
 
 #listfoods{
 	float:left;
