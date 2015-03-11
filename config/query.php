@@ -67,7 +67,7 @@
 function sql_query($sql, $error=TRUE)
 {
     if ($error)
-        $result = @mysqli_query($conn, $sql) or die("<p>$sql<p>" . mysqli_errno() . " : " .  mysqli_error() . "<p>error file : $_SERVER[PHP_SELF]");
+        $result = @mysqli_query($conn, $sql) or die("<p>$sql<p>" . mysqli_errno($conn) . " : " .  mysqli_error($conn) . "<p>error file : $_SERVER[PHP_SELF]");
     else
         $result = @mysqli_query($conn, $sql);
     return $result;
