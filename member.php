@@ -8,14 +8,14 @@ if ($mode == "regist" ) {
 	}elseif ( $pass1 != $pass2 ) {
 		echo "failure password matching";	
 	}else {
-		$user_dist = getdata("select count(*) as cnt from User where Email='$email' ");
+		$user_dist = getdata("select count(*) as cnt from User where Email='$email' ", $conn);
 		if ($user_dist[cnt] > 0 ) {
 			echo "Email is already subscribed";
 		}else {		
 			$sql = "insert into User set Email = '$email' , Name = '$rname' , Surname = '$surname' , Gender = '$gender' , Weight = '$weight' , Height = '$height' , Password = '" . md5( $pass1 ) . "' ";
 			$res = mysqli_query($conn, $sql);
 			if ($res) {
-				$user_info = getdata("select * from User where Email='$email' ");
+				$user_info = getdata("select * from User where Email='$email' ", $conn);
 				$_SESSION["sn_idx"] = $user_info["UserID"];
 				$_SESSION["sn_email"] = $user_info["Email"];
 				$_SESSION["sn_gender"] = $user_info["Gender"];
@@ -31,7 +31,7 @@ if ($mode == "regist" ) {
 	}
 	
 }elseif ($mode == "login" ) {
-	$res = getdata("select * from User where Email='$email' and Password='". md5( $pass ) . "'");
+	$res = getdata("select * from User where Email='$email' and Password='". md5( $pass ) . "'", $conn);
 	if ($res) {
 		$_SESSION["sn_idx"] = $res["UserID"];
 		$_SESSION["sn_email"] = $res["Email"];

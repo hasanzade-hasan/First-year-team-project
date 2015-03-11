@@ -64,7 +64,7 @@
 	}
 	
 
-function sql_query($sql, $error=TRUE)
+function sql_query($sql, $conn, $error=TRUE)
 {
     if ($error)
         $result = @mysqli_query($conn, $sql) or die("<p>$sql<p>" . mysqli_errno($conn) . " : " .  mysqli_error($conn) . "<p>error file : $_SERVER[PHP_SELF]");
@@ -74,9 +74,9 @@ function sql_query($sql, $error=TRUE)
 }
 
 
-function getdata($sql, $error=TRUE)
+function getdata($sql, $conn, $error=TRUE)
 {
-    $result = sql_query($sql, $error);
+    $result = sql_query($sql,$conn, $error);
     $row = sql_fetch_array($result);
     return $row;
 }
