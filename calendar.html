@@ -29,11 +29,11 @@ table {
   background: #f5f5f5;
   border-collapse: separate;
   box-shadow: inset 0 1px 0 #fff;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 24px;
   margin: auto;
-  text-align: left;
-  width: 125em;
+  height: 50em;
+  width: 70em;
 }
 
 th {
@@ -45,9 +45,10 @@ th {
   box-shadow: inset 0 1px 0 #999;
   color: white !important;
   font-weight: bold;
-  padding: 3px 5px;
   position: relative;
   text-shadow: 0 1px 0 #000;  
+  text-align: center !important;
+  padding-top: 10px !important;
 }
 
 th:first-child {
@@ -98,23 +99,26 @@ tr:last-of-type td:last-child {
   box-shadow: inset -1px -1px 0 #fff;
 }
 .add{
-  margin-left: 2em;
-  margin-right: -2em;
-}
-.date{
-  margin-left: -5em;
+  width: 120px;
+  height: 40px;
+  margin-top: 5px;
 }
 .remove{
-  margin-left: -5em;
-  margin-right: -5em;
+  width: 120px;
+  height: 40px;
+  margin-top: 20px;
+  margin-left: 15px;
 }
-.add_exercise{
-  margin-left: -4em;
+.remove_ex{
+  width: 100px;
+  height: 35px;
+  margin-top: 10px;
 }
-.remove_exercise{
-  margin-right: -4em;
-  margin-left: 2em;
+.add_ex{
+  width: 100px;
+  height: 40px;
 }
+
   </style>
   
   <noscript>		
@@ -140,7 +144,6 @@ tr:last-of-type td:last-child {
 				</nav>
 			</header>
 
-		
 		<!-- One -->
 			<div id = "main">
 					<div id='cssmenu'>
@@ -169,12 +172,13 @@ tr:last-of-type td:last-child {
       <tbody>
         <tr id = "1">
           <td>
-            <span class = "date">10/03/2015</span>
+            <span>10/03/2015</span>
+            <br>
             <button class = "add" type="button" onclick = "window.location.href='calculator.html'">Add food</button>
           </td>
 
-          <td class = "cell">
-            <button class = "remove" type="button" >Remove</button>
+          <td>
+            <button  class = "remove" type="button" >Remove</button>
           </td>
 
           <td>
@@ -186,16 +190,18 @@ tr:last-of-type td:last-child {
           </td>
 
           <td>
-            <button class = "add_exercise" type="button" onclick = "window.location.href='calculator.html'">Add exercise</button>
-            <button class = "remove_exercise" type="button" >Remove</button>
+            <button class = "add_ex" type="button" onclick = "window.location.href='exercises.html'">Add exercise</button>
+            <br>
+            <button class = "remove_ex" type="button" >Remove</button>
           </td>
           
           <td>2000.00</td>
         </tr>
 
         <tr id = "2">
-          <td>
-            <span class = "date">11/03/2015</span>
+          <td >
+            <span>11/03/2015</span>
+            <br>
             <button class = "add" type="button" onclick = "window.location.href='calculator.html'">Add food</button>
           </td>
 
@@ -212,8 +218,9 @@ tr:last-of-type td:last-child {
           </td>
 
           <td>
-            <button class = "add_exercise" type="button" onclick = "window.location.href='calculator.html'">Add exercise</button>
-            <button class = "remove_exercise" type="button" >Remove</button>
+            <button class = "add_ex" type="button" onclick = "window.location.href='exercises.html'">Add exercise</button>
+            <br>
+            <button class = "remove_ex" type="button" >Remove</button>
           </td>
           
           <td>2000.00</td>
@@ -221,7 +228,8 @@ tr:last-of-type td:last-child {
 
         <tr id = "3">
           <td>
-            <span class = "date">12/03/2015</span>
+            <span >12/03/2015</span>
+            <br>
             <button class = "add" type="button" onclick = "window.location.href='calculator.html'">Add food</button>
           </td0>
 
@@ -238,8 +246,9 @@ tr:last-of-type td:last-child {
           </td>
 
           <td>
-            <button class = "add_exercise" type="button" onclick = "window.location.href='calculator.html'">Add exercise</button>
-            <button class = "remove_exercise" type="button" >Remove</button>
+            <button class = "add_ex" type="button" onclick = "window.location.href='exercises.html'">Add exercise</button>
+            <br>
+            <button class = "remove_ex" type="button" >Remove</button>
           </td>
 
           <td>2000.00</td>
@@ -247,7 +256,8 @@ tr:last-of-type td:last-child {
 
         <tr>
           <td id = "4">
-            <span class = "date">13/03/2015</span>
+            <span >13/03/2015</span>
+            <br>
             <button class = "add" type="button" onclick = "window.location.href='calculator.html'">Add food</button>
           </td>
 
@@ -264,8 +274,9 @@ tr:last-of-type td:last-child {
           </td>
 
           <td>
-            <button class = "add_exercise" type="button" onclick = "window.location.href='calculator.html'">Add exercise</button>
-            <button class = "remove_exercise" type="button" >Remove</button>
+            <button class = "add_ex" type="button" onclick = "window.location.href='exercises.html'">Add exercise</button>
+            <br>
+            <button class = "remove_ex" type="button" >Remove</button>
           </td>
           
           <td>2000.00</td>
@@ -273,7 +284,8 @@ tr:last-of-type td:last-child {
 
         <tr id = "5">
           <td>
-            <span class = "date">14/03/2015</span>
+            <span >14/03/2015</span>
+            <br>
             <button class = "add" type="button" onclick = "window.location.href='calculator.html'">Add food</button>
           </td>
 
@@ -290,8 +302,9 @@ tr:last-of-type td:last-child {
           </td>
 
           <td>
-            <button class = "add_exercise" type="button" onclick = "window.location.href='calculator.html'">Add exercise</button>
-            <button class = "remove_exercise" type="button" >Remove</button>
+            <button class = "add_ex" type="button" onclick = "window.location.href='exercises.html'">Add exercise</button>
+            <br>
+            <button class = "remove_ex" type="button" >Remove</button>
           </td>
           
           <td>2000.00</td>
@@ -299,7 +312,8 @@ tr:last-of-type td:last-child {
 
         <tr id = "6">
           <td>
-            <span class = "date">15/03/2015</span>
+            <span >15/03/2015</span>
+            <br>
             <button class = "add" type="button" onclick = "window.location.href='calculator.html'">Add food</button>
           </td>
 
@@ -316,8 +330,9 @@ tr:last-of-type td:last-child {
           </td>
           
           <td>
-            <button class = "add_exercise" type="button" onclick = "window.location.href='calculator.html'">Add exercise</button>
-            <button class = "remove_exercise" type="button" >Remove</button>
+            <button class = "add_ex" type="button" onclick = "window.location.href='exercises.html'">Add exercise</button>
+            <br>
+            <button class = "remove_ex" type="button" >Remove</button>
           </td>
 
           <td>2000.00</td>
@@ -325,7 +340,8 @@ tr:last-of-type td:last-child {
 
         <tr id = "7">
           <td>
-            <span class = "date">16/03/2015</span>
+            <span >16/03/2015</span>
+            <br>
             <button class = "add" type="button" onclick = "window.location.href='calculator.html'">Add food</button>
           </td>
 
@@ -342,8 +358,9 @@ tr:last-of-type td:last-child {
           </td>
           
           <td>
-            <button class = "add_exercise" type="button" onclick = "window.location.href='calculator.html'">Add exercise</button>
-            <button class = "remove_exercise" type="button" >Remove</button>
+            <button class = "add_ex" type="button" onclick = "window.location.href='exercises.html'">Add exercise</button>
+            <br>
+            <button class = "remove_ex" type="button" >Remove</button>
           </td>
 
           <td>2000.00</td>
