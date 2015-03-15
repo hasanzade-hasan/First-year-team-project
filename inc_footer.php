@@ -7,7 +7,7 @@
 					<ul class="copyright">
 						<li>&copy; Z4. All rights reserved.</li>
 						<li>Design: Z4 </li>
-						<li>Images: blabla.com </li>
+						<li><a href="conditions.html"> Terms and Conditions </li>
 						<li>
 						<ul class="icons">
 								<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
