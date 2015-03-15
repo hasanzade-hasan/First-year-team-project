@@ -1,5 +1,5 @@
-<?php
-		$page_title = "Exercises";
+
+<?php           $page_title = "Exercises";
 		$page_id = "5";
 		include "./inc_header_my.php"; 
 		if (!isset($sdate)) {
@@ -9,6 +9,7 @@
 			$idate = date("Y-m-d");
 		}
 ?>
+					<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
 					<div id = "content">
 						<table class="contentTable">
 						<thead>
@@ -34,7 +35,7 @@
 								<p><?php echo nl2br( $row["Description"] )?></p>
 							</td>
 							<td class=contentCell><?php echo $Photo;?></td>
-							<td class=contentCell><a href="./calendar.php?mode=ex&eid=<?php echo $row["ExerciseID"];?>&sdate=<?php echo $sdate;?>&idate=<?php echo $idate;?>" style="color:#000;">This is adds to the calendar</a></td>
+							<td class=contentCell><input type="text" name="idate" value="<?php echo $idate;?>" class="idate" id="idate_<?php echo $row["ExerciseID"];?>" style=""><a href="#" style="color:#000;" onclick="javascript:add_calendar(<?php echo $row["ExerciseID"];?>);return false;">This is adds to the calendar</a></td>
 						</tr>
 						<?php }?>
 	</table>
@@ -42,6 +43,37 @@
 					
 				</div>
 			<?php include "./inc_footer.php"; ?>
+<script type="text/javascript">
+<!--
 
+ $(document).ready(function() {
+  var clareCalendar = {
+   weekHeader: 'Wk',
+   dateFormat: 'yy-mm-dd',
+   autoSize: false, 
+   changeMonth: true,
+   changeYear: true, 
+   showMonthAfterYear: true, 
+   buttonImageOnly: true,
+   buttonText: 'calendar', 
+   buttonImage: './images/calendar-icon.png',
+   showOn: "both", 
+   yearRange: 'c-99:c+99', 
+   maxDate: '+1y', 
+   minDate: '-1y'
+  };
+  $(".idate").datepicker(clareCalendar);
+  $("img.ui-datepicker-trigger").attr("style","width:30px;margin-left:5px; vertical-align:middle; cursor:pointer;"); 
+  $("#ui-datepicker-div").hide(); 
+ });
+
+function add_calendar(val){
+	var idate = document.getElementById("idate_"+val).value;
+	location.href='./calendar.php?mode=ex&eid='+val+'&sdate=<?php echo $sdate;?>&idate='+idate;
+}
+
+//-->
+</script>
 	</body>
 </html>
+?php
