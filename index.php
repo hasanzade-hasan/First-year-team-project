@@ -52,6 +52,11 @@ include "./config/query.php";
 					<h2>SANOMANCHESTER</h2>
 					<p>Health is the real wealth </p>
 					<ul class="actions">
+					<?php 
+					if ( isset($_SESSION["sn_idx"]) ) {?>
+						<li><span href="#" class="button big special" id="toggle-login">Go Myprofile</span></li>
+					<?php
+					} else {?>
 						<li><span href="#" class="button big special" id="toggle-login">Log in</span> <div id="login">
 							<div id="triangle"></div>
 							<h1>Log in</h1>
@@ -76,7 +81,7 @@ include "./config/query.php";
 									</ul>
 									<ul>
 										<li> <input type="email" placeholder="Email" name="email" /> </li>
-										<li> <select type = "input" name="gender">
+										<li> <select name="gender">
 												<option value="">- GENDER -</option>
 												<option value="0">Male</option>
 												<option value="1">Female</option>
@@ -97,6 +102,8 @@ include "./config/query.php";
 						</div>
 						<script src="js/index2.js"></script>
 						</li>
+					<?php
+					}?>
 					</ul>
 				</div>
 			</section>
@@ -126,28 +133,7 @@ include "./config/query.php";
 		
 				</div>
 			</section>
-			<div id = "logout">
-				<span class="button small" onclick="javascript:location.href='member.php?mode=logout';"> Log out</span>
-			</div>
-			<!-- Footer -->
-			<footer id="footer">
-				<div class="container">
-					<ul class="copyright">
-						<li>&copy; Z4. All rights reserved.</li>
-						<li>Design: Z4 </li>
-						<li>Images: blabla.com </li>
-						<li>
-						<ul class="icons">
-								<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-								
-							</ul>
-						</li>
-					</ul>
-				</div>
-				
-			</footer>
+			<?php include "./inc_footer.php"; ?>
 			<script type="text/javascript">
 				function login(){
 					var email = document.frm_login.email.value;
@@ -180,6 +166,7 @@ include "./config/query.php";
 					var pass1 = document.frm_regist.pass1.value;
 					var pass2 = document.frm_regist.pass2.value;
 					var mode = document.frm_regist.mode.value;
+					alert( gender);
 					sendRequest(
 						regist_result, '&email='+ email + '&pass1=' + pass1 + '&pass2=' + pass2 + '&mode=' + mode + '&rname=' + rname + '&surname=' + surname + '&gender=' + gender + '&weight=' + weight + '&height=' + height + '&mode=' + mode,
 						'POST',

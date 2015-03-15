@@ -45,6 +45,26 @@ if ($mode == "cal" ) {
 		$food_arr = explode( "|^|" , $food_list[$i] );
 		if ( $food_arr[1] > 0 ) {
 			$sql = "insert into DietFoods(`UserID`,`Meal`,`Date`,`FoodID`,`Quantity`) values( '" . $_SESSION["sn_idx"] . "' , '$Meal' , '$cDate1' , '$food_arr[0]' , '$food_arr[1]')";
+			$res = mysqli_query( $conn , $sql );
+		}
+	}
+	echo "<script>location.href='./calendar.php?sdate=$cDate1';</script>";
+}elseif ($mode == "edit" ) {
+	$sql_del = "delete from DietFoods where UserID='" . $_SESSION["sn_idx"] . "' and Meal='$Meal' and `Date`='$cDate1'";
+	$res = mysqli_query($conn , $sql_del);
+	$food_list = array();
+	$total_cal = 0;
+	if ( strpos( $gid , "," ) === false) { //1 item
+		$food_list[0] = $gid;
+	}else {
+		$food_list = explode( "," , $gid );
+	}
+
+	for ( $i = 0 ; $i < count( $food_list ) ; $i++ ) {
+		$food_arr =array();
+		$food_arr = explode( "|^|" , $food_list[$i] );
+		if ( $food_arr[1] > 0 ) {
+			$sql = "insert into DietFoods(`UserID`,`Meal`,`Date`,`FoodID`,`Quantity`) values( '" . $_SESSION["sn_idx"] . "' , '$Meal' , '$cDate1' , '$food_arr[0]' , '$food_arr[1]')";
 			$res = mysqli_query($conn , $sql);
 		}
 	}

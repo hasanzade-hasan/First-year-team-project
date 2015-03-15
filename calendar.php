@@ -5,6 +5,11 @@
 		if (!isset($sdate)) {
 			$sdate = date("Y-m-d");
 		}
+		if (date("w" , strtotime($sdate) ) == 1 ) {
+			$start_date = $sdate;
+		}else {
+			$start_date =  date("Y-m-d", strtotime("last Monday" , strtotime($sdate)));
+		}
 		//add or remove exercise
 		if (isset($mode)) {
 			if ( $mode == "ex" ) {
@@ -20,7 +25,7 @@
 
 <style>
 		body {
-		  background: #fafafa url(http://jackrugile.com/images/misc/noise-diagonal.png);
+		  background: #fafafa url(https://jackrugile.com/images/misc/noise-diagonal.png);
 		  color: #444;
 		  /*font: 100%/30px 'Helvetica Neue', helvetica, arial, sans-serif;*/
 		  text-shadow: 0 1px 0 #fff;
@@ -42,7 +47,7 @@
 		}
 
 		th {
-		  background: url(http://jackrugile.com/images/misc/noise-diagonal.png), linear-gradient(#777, #444);
+		  background: url(https://jackrugile.com/images/misc/noise-diagonal.png), linear-gradient(#777, #444);
 		  border-left: 1px solid #555;
 		  border-right: 1px solid #777;
 		  border-top: 1px solid #555;
@@ -84,11 +89,11 @@
 		} 
 
 		tr {
-		  background: url(http://jackrugile.com/images/misc/noise-diagonal.png);  
+		  background: url(https://jackrugile.com/images/misc/noise-diagonal.png);  
 		}
 
 		tr:nth-child(odd) td {
-		  background: #f1f1f1 url(http://jackrugile.com/images/misc/noise-diagonal.png);  
+		  background: #f1f1f1 url(https://jackrugile.com/images/misc/noise-diagonal.png);  
 		}
 
 		tr:last-of-type td {
@@ -145,9 +150,9 @@
 		for ( $i = 0 ; $i < 7 ; $i++ ) {
 			$cal_res=0;
 			if ( $i == 0 ) {
-				$list_date = $sdate;
+				$list_date = $start_date;
 			}else {
-				$list_date = date("Y-m-d",strtotime("+".$i." days", strtotime($sdate)));
+				$list_date = date("Y-m-d",strtotime("+".$i." days", strtotime($start_date)));
 			}
 			$view_date = date("d/m/Y" , strtotime($list_date) );
 			$remove_B = false;
@@ -219,9 +224,9 @@
 					$remove_E = true;
 				}
 			?>
-            <button class = "add_exercise" type="button" onclick = "window.location.href='exercises.php?sdate=<?php echo $sdate;?>&idate=<?php echo $list_date;?>';">Add exercise</button>
+            <button class = "add_exercise" type="button" onclick = "window.location.href='exercises.php?sdate=<?php echo $start_date;?>&idate=<?php echo $list_date;?>';">Add exercise</button>
 			<?php if ($remove_E == true ) {?>
-            <button class = "remove_exercise" type="button" onclick = "window.location.href='calendar.php?sdate=<?php echo $sdate;?>&idate=<?php echo $list_date;?>&mode=exdel';">Remove</button>
+            <button class = "remove_exercise" type="button" onclick = "window.location.href='calendar.php?sdate=<?php echo $start_date;?>&idate=<?php echo $list_date;?>&mode=exdel';">Remove</button>
 			<?php }?>
           </td>
           

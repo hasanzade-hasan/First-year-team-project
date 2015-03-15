@@ -1,5 +1,5 @@
-
-<?php           $page_title = "Exercises";
+<?php
+		$page_title = "Exercises";
 		$page_id = "5";
 		include "./inc_header_my.php"; 
 		if (!isset($sdate)) {
@@ -9,9 +9,11 @@
 			$idate = date("Y-m-d");
 		}
 ?>
-					<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
-	
-  				<div id = "content">
+					<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+					<style type="text/css" title="">
+					.ui-datepicker-calendar {background-color:#fff;}
+					</style>
+					<div id = "content">
 						<table class="contentTable">
 						<thead>
 							<tr>
@@ -36,7 +38,7 @@
 								<p><?php echo nl2br( $row["Description"] )?></p>
 							</td>
 							<td class=contentCell><?php echo $Photo;?></td>
-							<td class=contentCell><input type="text" name="idate" value="<?php echo $idate;?>" class="idate" id="idate_<?php echo $row["ExerciseID"];?>" style=""><a href="#" style="color:#000;" onclick="javascript:add_calendar(<?php echo $row["ExerciseID"];?>);return false;">This is adds to the calendar</a></td>
+							<td class=contentCell><input type="text" name="idate" value="<?php echo $idate;?>" class="idate" id="idate_<?php echo $row["ExerciseID"];?>" style="" readonly><a href="#" style="color:#000;" onclick="javascript:add_calendar(<?php echo $row["ExerciseID"];?>);return false;">This is adds to the calendar</a></td>
 						</tr>
 						<?php }?>
 	</table>
@@ -77,4 +79,3 @@ function add_calendar(val){
 </script>
 	</body>
 </html>
-?php

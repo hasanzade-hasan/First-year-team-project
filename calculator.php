@@ -8,11 +8,19 @@
 		if (!isset($sdate)) {
 			$sdate = "";
 		}
+		if (!isset($rm)) {
+			$rm = "";
+		}
+		if ($rm != "" && $sdate != "") {
+			$mode_frm = "edit";
+		}else {
+			$mode_frm = "add";
+		}
 ?>
 <script src="js/ajax.js"></script>
 <style type="text/css" title="">
 </style>
-<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
 
 					<div id = "content">
 					
@@ -42,7 +50,7 @@
 
 
 				<form name='form2' method="POST" action="./calculator_.php" style="background:#fff;padding:0;">	
-				<input type="hidden" name="mode" value="add">
+				<input type="hidden" name="mode" value="<?php echo $mode_frm;?>">
 				<input type="hidden" name="totalCal" value="0">
 				<input type="hidden" name="gid" value="">
 				<div id = "calcfood">
@@ -53,23 +61,43 @@
 									<th style="text-align:center;">Remove</th>
 								</tr>
 								<?php 
-
+									if ($mode_frm == "edit" ) {
+										$sql = " select B.*, from DietFoods as A, Food as B where UserID='" . $_SESSION["sn_idx"] . "' and Meal='$rm' and `Date`='$sdate'";
+									}else {
+										$sql="select B.* , A.RecipeID from RecipeFoods as A , Food as B where A.FoodID=B.FoodID order by B.Name ASC";
+									}
+									$cal_total = 0;
 									$sql="select B.* , A.RecipeID from RecipeFoods as A , Food as B where A.FoodID=B.FoodID order by B.Name ASC";
 									$result=mysqli_query( $conn, $sql ) OR die(__FILE__." : Line ".__LINE__."<p>".mysql_error());
 									$i = 1;
 									while ($row = mysqli_fetch_assoc($result)) {
-										if ($rid == $row["RecipeID"] ) {
-											$chk = " checked";
-											$view_list = "";
+
+										$quantity_dft = "";
+										$chk = "";
+										$view_list = "";
+
+										if ($mode_frm == "edit" ) {
+											$row_edit = getdata( " select * from  DietFoods where UserID='" . $_SESSION["sn_idx"] . "' and Meal='$rm' and `Date`='$sdate' and FoodID ='" . $row["FoodID"] . "'" , $conn );
+											if ($row_edit["UserID"] != "" ) {
+												$chk = " checked";
+												$quantity_dft = $row_edit["Quantity"];
+												$cal_total += $row_edit["Quantity"] * $row["Calories"];
+											}else {
+												$view_list = "none";
+											}
 										}else {
-											$chk = "";
-											$view_list = "none";											
+											if ($rid == $row["RecipeID"] ) {
+												$chk = " checked";
+											}else {
+												$view_list = "none";
+											}										
 										}
+
 								?>
 								<tr id="Food_row_<?php echo $row["FoodID"];?>" style="display:<?php echo $view_list;?>;">
 									<td style="width:40%;padding:0;"><input type="checkbox" style="display:none;" id="Food_list_<?php echo $row["FoodID"];?>" name="Food_list" value="<?php echo $row["FoodID"];?>" <?php echo $chk;?>><?php echo $row["Name"];?>
 									</td>
-									<td style="width:40%;padding:0;"><input type="text" id="Portion_list_<?php echo $row["FoodID"];?>" name="Portion" style="width:100px;text-align:right;" onkeyup="cal();"></td>
+									<td style="width:40%;padding:0;"><input type="text" id="Portion_list_<?php echo $row["FoodID"];?>" name="Portion" style="width:100px;text-align:right;" onkeyup="cal();" value="<?php echo $quantity_dft;?>"></td>
 									<td style="width:20%;padding:0;"><a href="#" onclick="deleteFood(<?php echo $row["FoodID"];?>);return false;"> Remove </a></td>
 								</tr>
 								<?php
@@ -79,17 +107,17 @@
 							</table>
 				</div>
 				<div id = "total">
-					<p> Total ammount of calories:<span id="TotalAmmount">0</span> Kcal</p>
-								<select name="Meal" class="form-controll" style="border:1px solid #ccc;padding2%;height:1.75em;width:200px;" id="Meal">
-									<option value="">- MEAL -</option>
-									<option value="B">Breakfast</option>
-									<option value="L">Lunch</option>
-									<option value="D">Dinner</option>
-								</select>
-		
-								<input type="text" name="cDate1" value="<?php echo $sdate;?>" id="cDate" style="width:150px;height:30px;margin:0;padding:0;" placeholder="Choose Date" />
-							<span href ="#" class="button small" onclick="add_calendar();return false;"> Add to calendar </span>
-			</div>
+					<p> Total ammount of calories:<span id="TotalAmmount"><?php echo number_format( $cal_total);?></span> Kcal</p>
+						<select name="Meal" class="form-controll" style="border:1px solid #ccc;padding2%;height:1.75em;width:200px;" id="Meal">
+							<option value="" <?php if ( $rm == "" ) { echo " selected"; }?>>- MEAL -</option>
+							<option value="B" <?php if ( $rm == "B" ) { echo " selected"; }?>>Breakfast</option>
+							<option value="L" <?php if ( $rm == "L" ) { echo " selected"; }?>>Lunch</option>
+							<option value="D" <?php if ( $rm == "D" ) { echo " selected"; }?>>Dinner</option>
+						</select>
+
+						<input type="text" name="cDate1" value="<?php echo $sdate;?>" id="cDate" style="width:150px;height:30px;margin:0;padding:0;" placeholder="Choose Date" readonly />
+						<span href ="#" class="button small" onclick="add_calendar();return false;"> Add to calendar </span>
+				</div>
 							</form>
 	
 		</div>
