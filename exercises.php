@@ -30,7 +30,8 @@
 								$Photo = "";
 								if (file_exists("./images/exercise/" . $row["Photo"] . "")) { 
 									//$Photo = "<img src=\"./images/exercise/" . $row["Photo"] . "\">"; 
-									$Photo = "<iframe width=\"420\" height=\"315\" src=\"".$row["Photo"]."\  allowfullscreen></iframe>";
+									$url = $row["Photo"];
+ 									$Photo = "<embed src='$url' width = '560' height = '315'> </embed>";
 
 								}
 						?>
