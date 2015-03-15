@@ -5,7 +5,7 @@ include "./config/query.php";
 
 //myprofile menu required
 if (!isset($_SESSION["sn_idx"])) {
-	echo "<script>alert('This menu requires a login.');location.href='/';</script>"; 
+	echo "<script>alert('This menu requires a login.');location.href='./index.php';</script>"; 
 	exit;
 }
 ?>
