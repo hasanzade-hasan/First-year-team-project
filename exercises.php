@@ -29,7 +29,9 @@
 							while ($row = mysqli_fetch_assoc($result)) {
 								$Photo = "";
 								if (file_exists("./images/exercise/" . $row["Photo"] . "")) { 
-									$Photo = "<img src=\"./images/exercise/" . $row["Photo"] . "\">"; 
+									//$Photo = "<img src=\"./images/exercise/" . $row["Photo"] . "\">"; 
+									$Photo = "<iframe width=\"420\" height=\"315\" src=\"".$row["Photo"] frameborder=\"0\" allowfullscreen></iframe>";
+
 								}
 						?>
 						<tr>
