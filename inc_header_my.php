@@ -48,7 +48,7 @@ if (!isset($_SESSION["sn_idx"])) {
 						<li><a href="index.php">Home</a></li>
 						<li><a href="map.php">Healthy Manchester Map</a></li>
 						<li><a href="faq.php">FAQ</a></li>
-						<li><a href="contact.php">Cntact</a></li>
+						<li><a href="contact.php">Contact</a></li>
 						
 					</ul>
 				</nav>
