@@ -25,7 +25,7 @@ if (!isset($_SESSION["sn_idx"])) {
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
 		 <script src="js/script.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
   
   
   <script>
