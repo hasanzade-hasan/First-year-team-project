@@ -9,13 +9,8 @@
 			$idate = date("Y-m-d");
 		}
 ?>
-					<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+					<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
 	
-
-				  <style type="text/css" title="">
-				   .ui-datepicker-calendar {background-color:#fff;}
-				  </style>
-  
   				<div id = "content">
 						<table class="contentTable">
 						<thead>
