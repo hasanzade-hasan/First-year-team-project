@@ -20,7 +20,7 @@
 <script src="js/ajax.js"></script>
 <style type="text/css" title="">
 </style>
-<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
 
 					<div id = "content">
 					
