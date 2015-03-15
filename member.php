@@ -8,14 +8,14 @@ if ($mode == "regist" ) {
 	}elseif ( $pass1 != $pass2 ) {
 		echo "failure password matching";	
 	}else {
-		$user_dist = getdata("select count(*) as cnt from User where Email='$email' ", $conn);
+		$user_dist = getdata("select count(*) as cnt from User where Email='$email' " , $conn );
 		if ($user_dist["cnt"] > 0 ) {
 			echo "Email is already subscribed";
 		}else {		
 			$sql = "insert into User set Email = '$email' , Name = '$rname' , Surname = '$surname' , Gender = '$gender' , Weight = '$weight' , Height = '$height' , Password = '" . md5( $pass1 ) . "' ";
-			$res = mysqli_query($conn, $sql);
+			$res = mysqli_query( $conn , $sql);
 			if ($res) {
-				$user_info = getdata("select * from User where Email='$email' ", $conn);
+				$user_info = getdata("select * from User where Email='$email' " , $conn );
 				$_SESSION["sn_idx"] = $user_info["UserID"];
 				$_SESSION["sn_email"] = $user_info["Email"];
 				$_SESSION["sn_gender"] = $user_info["Gender"];
@@ -31,8 +31,8 @@ if ($mode == "regist" ) {
 	}
 	
 }elseif ($mode == "login" ) {
-	$res = getdata("select * from User where Email='$email' and Password='". md5( $pass ) . "'", $conn);
-	if ($res) {
+	$res = getdata("select * from User where Email='$email' and Password='". md5( $pass ) . "'" , $conn );
+	if ($res["UserID"] != "" ) {
 		$_SESSION["sn_idx"] = $res["UserID"];
 		$_SESSION["sn_email"] = $res["Email"];
 		$_SESSION["sn_gender"] = $res["Gender"];
@@ -44,5 +44,8 @@ if ($mode == "regist" ) {
 	}else {
 		echo "incorrect login info";
 	}
+}elseif ($mode == "logout" ) {
+	session_unset();
+	echo "<script>location.href = '/';</script>";
 }
 ?>

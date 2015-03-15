@@ -34,13 +34,13 @@ include "./config/query.php";
 
 		<!-- Header -->
 			<header id="header" class="skel-layers-fixed">
-				<h1><a href="index.html">SanoManchester</a></h1>
+				<h1><a href="index.php">SanoManchester</a></h1>
 				<nav id="nav">
 					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="map.html">Healthy Manchester Map</a></li>
-						<li><a href="faq.html">FAQ</a></li>
-						<li><a href="contact.html">Cntact</a></li>
+						<li><a href="index.php">Home</a></li>
+						<li><a href="map.php">Healthy Manchester Map</a></li>
+						<li><a href="faq.php">FAQ</a></li>
+						<li><a href="contact.php">Cntact</a></li>
 						
 					</ul>
 				</nav>
@@ -55,7 +55,7 @@ include "./config/query.php";
 						<li><span href="#" class="button big special" id="toggle-login">Log in</span> <div id="login">
 							<div id="triangle"></div>
 							<h1>Log in</h1>
-							<form name='frm_login' method="POST" action="<?=$_SERVER['PHP_SELF']?>" onSubmit="javascript:login();return false;" >
+							<form name='frm_login' method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>" onSubmit="javascript:login();return false;" >
 							<input type="hidden" name="mode" value="login">
 								<input type="email" name="email" placeholder="Email" />
 								<input type="password" name="pass" placeholder="Password" />
@@ -68,7 +68,7 @@ include "./config/query.php";
 						<div id="signup">
 							<div id="triangle"></div>
 								<h1>Sig up</h1>
-								<form name='frm_regist' method="POST" action="<?=$_SERVER['PHP_SELF']?>" onSubmit="javascript:regist();return false;">
+								<form name='frm_regist' method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>" onSubmit="javascript:regist();return false;">
 								<input type="hidden" name="mode" value="regist">
 									<ul>
 										<li> <input type="text" placeholder="Name" name="rname" /> </li>
@@ -126,6 +126,9 @@ include "./config/query.php";
 		
 				</div>
 			</section>
+			<div id = "logout">
+				<span class="button small" onclick="javascript:location.href='member.php?mode=logout';"> Log out</span>
+			</div>
 			<!-- Footer -->
 			<footer id="footer">
 				<div class="container">
@@ -153,16 +156,16 @@ include "./config/query.php";
 					sendRequest(
 						login_result, '&email='+ email + '&pass=' + pass + '&mode=' + mode,
 						'POST',
-						'./member.html', true, true
+						'./member.php', true, true
 					);
 				}
 
 				function login_result(oj){
 					var res = decodeURIComponent(oj.responseText);
 					if ( res == "login_ok" ) {
-						location.href="./myprofile.html";
+						location.href="./myprofile.php";
 					}else {
-						//alert(res);
+						alert(res);
 						return false;
 					}
 				}
@@ -180,7 +183,7 @@ include "./config/query.php";
 					sendRequest(
 						regist_result, '&email='+ email + '&pass1=' + pass1 + '&pass2=' + pass2 + '&mode=' + mode + '&rname=' + rname + '&surname=' + surname + '&gender=' + gender + '&weight=' + weight + '&height=' + height + '&mode=' + mode,
 						'POST',
-						'./member.html', true, true
+						'./member.php', true, true
 					);
 				}
 
@@ -189,7 +192,7 @@ include "./config/query.php";
 
 					if ( res == "regist_ok" ) {
 						alert("Join successfully completed");
-						location.href="./myprofile.html";
+						location.href="./myprofile.php";
 					}else {
 						alert(res);
 						return false;
