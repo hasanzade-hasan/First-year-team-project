@@ -30,9 +30,7 @@
 								$Photo = "";
 								if (file_exists("./images/exercise/" . $row["Photo"] . "")) { 
 									//$Photo = "<img src=\"./images/exercise/" . $row["Photo"] . "\">"; 
-									$url = $row["Photo"];
- 									$Photo = "<embed src='$url' width = '560' height = '315'> </embed>";
-
+									$Photo ="<iframe width="560" height="315" src ="$row["Photo"]" frameborder="0" allowfullscreen></iframe>";
 								}
 						?>
 						<tr>
@@ -40,6 +38,7 @@
 								<p><?php echo $row["ExerciseName"]?></p>
 								<p><?php echo nl2br( $row["Description"] )?></p>
 							</td>
+C
 							<td class=contentCell><?php echo $Photo;?></td>
 							<td class=contentCell><input type="text" name="idate" value="<?php echo $idate;?>" class="idate" id="idate_<?php echo $row["ExerciseID"];?>" style="" readonly><a href="#" style="color:#000;" onclick="javascript:add_calendar(<?php echo $row["ExerciseID"];?>);return false;">This is adds to the calendar</a></td>
 						</tr>
