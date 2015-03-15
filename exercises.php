@@ -34,7 +34,7 @@
 								}
 						?>
 						<tr>
-							<td class=contentCell id=stupidfuckcell>
+							<td class=contentCell id=newCell>
 								<p><?php echo $row["ExerciseName"]?></p>
 								<p><?php echo nl2br( $row["Description"] )?></p>
 							</td>
