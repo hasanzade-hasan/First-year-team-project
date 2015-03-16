@@ -61,8 +61,11 @@
 							<?php
 								$row=getdata(	"select * from ExercisesTable order by rand() limit 0 , 1 " , $conn);
 								$Photo = "";
-								if (file_exists("./images/exercise/" . $row["Photo"] . "")) { 
-									$Photo = "<img src=\"./images/exercise/" . $row["Photo"] . "\" style='width:80%;'>"; 
+								$media_height=210;
+								$media_width=354;
+
+								if( $row["Photo"] != "") { 
+										$Photo = "<iframe width=\"$media_width\" height=\"$media_height\" src=\"" . $row["Photo"] ."\" frameborder=\"0\" allowfullscreen></iframe>"; 
 								}
 								echo $row["ExerciseName"] . "<br/ >";
 								echo $Photo . "<br/ >";
