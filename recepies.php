@@ -23,12 +23,12 @@
 								}
 						?>
 						<tr>
-							<td class=contentCell id=stupidfuckcell>
+							<td class=contentCell>
 								<p><?php echo $row["RecipeName"]?></p>
 								<p><?php echo nl2br( $row["Description"] )?></p>
 							</td>
 							<td class=contentCell><?php echo $Photo;?></td>
-							<td class=contentCell><a href="./calculator.php?rid=<?php echo $row["RecipeID"];?>" style="color:#000;">This is adds to the calculator</a></td>
+							<td class=contentCell><a href="./calculator.php?rid=<?php echo $row["RecipeID"];?>" style="color:#000;">Add to calculator</a></td>
 						</tr>
 						<?php }?>
 	</table>
