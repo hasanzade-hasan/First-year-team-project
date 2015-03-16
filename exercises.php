@@ -26,16 +26,23 @@
 							$sql="select * from ExercisesTable order by ExerciseID ASC";
 							$result = mysqli_query($conn , $sql);
 							$i = 1;
+		
+							$media_height=210;
+							$media_width=354;
 							while ($row = mysqli_fetch_assoc($result)) {
 								$Photo = "";
+								if( $row["Photo"]!=""){
+										$Photo = "<iframe width=\"$media_width\" height=\"$media_height\" src=\"" . $row["Photo"] ."\" frameborder=\"0\" allowfullscreen></iframe>"; 
+								}
+								
 						?>
 						<tr>
 							<td class=contentCell id=newCell>
 								<p><?php echo $row["ExerciseName"]?></p>
 								<p><?php echo nl2br( $row["Description"] )?></p>
 							</td>
-C
-							<td class=contentCell><?php echo $row["Photo"];?></td>
+
+							<td class=contentCell><?php echo $Photo;?></td>
 							<td class=contentCell><input type="text" name="idate" value="<?php echo $idate;?>" class="idate" id="idate_<?php echo $row["ExerciseID"];?>" style="" readonly><a href="#" style="color:#000;" onclick="javascript:add_calendar(<?php echo $row["ExerciseID"];?>);return false;">This is adds to the calendar</a></td>
 						</tr>
 						<?php }?>
