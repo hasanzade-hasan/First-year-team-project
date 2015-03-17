@@ -1024,7 +1024,8 @@ select[type="input"] {
   }
   
 select[name="gender"]{
-width: 13em;
+width: 12.5em;
+padding-left:1em;
 }
 
 
