@@ -569,6 +569,13 @@
 			font-weight: 400;
 		}
 
+			input[type="submit"].small:hover,
+			input[type="reset"].small:hover,
+			input[type="button"].small:hover,
+			.button.small:hover {
+				background-color: #76a9d7;
+			}
+
 		input[type="submit"].big,
 		input[type="reset"].big,
 		input[type="button"].big,
