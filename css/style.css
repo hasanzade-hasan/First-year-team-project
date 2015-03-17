@@ -1032,7 +1032,7 @@ select[type="input"] {
   
 select[name="gender"]{
 width: 12.3em;
-margin-left:1.1em;
+margin-left:1em;
 margin-right:0.7em;
 }
 
@@ -1354,7 +1354,7 @@ box-shadow: 6px -2px 6px 0px #888888;
 
 #listfoods{
 	float:left;
-	height: 30em;
+	height: 35em;
 	width: 25em;
 	
 	border-color: black;
@@ -1381,9 +1381,9 @@ box-shadow: 6px -2px 6px 0px #888888;
 
 #calculator{
 	float:right;
-	height: 30em;
+	height: 35em;
 	width: 25em;
-	
+	overflow: scroll;
     border-radius: 0.3em;
 	margin-right: 12em;
 	margin-top: 2em;

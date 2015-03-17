@@ -62,7 +62,7 @@ if (!isset($_SESSION["sn_idx"])) {
    							<li <?php echo ( $page_id == "1" ) ? "class='active'" : ""; ?>><a href='myprofile.php'><span>My Profile</span></a></li>
    							<li <?php echo ( $page_id == "2" ) ? "class='active'" : ""; ?>><a href='calendar.php'><span>My Calendar</span></a></li>
    							<li <?php echo ( $page_id == "3" ) ? "class='active'" : ""; ?>><a href='calculator.php'><span>Calories calculator</span></a></li>
-    						<li <?php echo ( $page_id == "4" ) ? "class='active'" : ""; ?>><a href='recepies.php'><span>Recepies</span></a></li>
+    						<li <?php echo ( $page_id == "4" ) ? "class='active'" : ""; ?>><a href='recepies.php'><span>Recipes</span></a></li>
    							<li <?php echo ( $page_id == "5" ) ? "class='active'" : "class='last'"; ?>><a href='exercises.php'><span>Exercises</span></a></li>
 						</ul>
 					</div>
