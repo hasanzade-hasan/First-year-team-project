@@ -69,10 +69,10 @@ include "./config/query.php";
 							</div>
 							<script src="js/index.js"></script>
 						</li>
-						<li><span href="#" class="button big special" id="toggle-signup">signup</span>
+						<li><span href="#" class="button big special" id="toggle-signup">sign up</span>
 						<div id="signup">
 							<div id="triangle"></div>
-								<h1>Sig up</h1>
+								<h1>Sign up</h1>
 								<form name='frm_regist' method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>" onSubmit="javascript:regist();return false;">
 								<input type="hidden" name="mode" value="regist">
 									<ul>
@@ -88,8 +88,8 @@ include "./config/query.php";
 											     </select> </li> 
 									</ul>
 									<ul >
-										<li> <input type="text" placeholder="weight" name="weight" /> </li>
-										<li> <input type="text" placeholder="height" name="height" /> </li>
+										<li> <input type="text" placeholder="Weight(Kg)" name="weight" /> </li>
+										<li> <input type="text" placeholder="Height(cm)" name="height" /> </li>
 									</ul>
 									<ul>
 										<li> <input type="password" placeholder="Password" name="pass1" /> </li>
