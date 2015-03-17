@@ -1023,6 +1023,9 @@ select[type="input"] {
   
   }
   
+select[name="gender"]{
+width: 50%;
+}
 
 
 input[type="submit"]:hover{
