@@ -90,7 +90,7 @@
 								</li>
 							</ul>
 
-							</div
+							</div>
 
 						<div id="box3">
 							<h1> Start a diet </h1>
@@ -148,13 +148,13 @@
 							</div>
 							
 						
-						>
+						
 						
 							
 							
 					</div>
 					
-				</div>
+				
 		
 			<?php include "./inc_footer.php"; ?>
 
