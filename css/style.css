@@ -1024,7 +1024,7 @@ select[type="input"] {
   }
   
 select[name="gender"]{
-width: 50%;
+width: 10em;
 }
 
 
