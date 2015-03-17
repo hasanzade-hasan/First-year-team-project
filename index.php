@@ -117,7 +117,7 @@ include "./config/query.php";
 					<div id="box">
 						
 						<img src="images/salad.jpg" width ="100%">
-						<h3>RECIEPES</h3>
+						<h3>RECIPES</h3>
 						<p>Nullam quis eleifend lectus. Suspendisse et lacus placerat, suscipit erat id, ullamcorper nisl. Maecenas gravida dictum fringilla. Phasellus lobortis, felis id accumsan condimentum, magna erat malesuada ligula, quis egestas urna nisl nec velit. Etiam at metus sit amet ex feugiat tincidunt.</p>
 					</div>
 					<div id="box">
