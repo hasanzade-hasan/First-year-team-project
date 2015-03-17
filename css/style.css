@@ -1024,8 +1024,9 @@ select[type="input"] {
   }
   
 select[name="gender"]{
-width: 12.5em;
-margin-left:1.1em;
+width: 12.3em;
+margin-left:1.2em;
+margin-right:0.5em;
 }
 
 
