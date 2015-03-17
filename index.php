@@ -81,11 +81,11 @@ include "./config/query.php";
 									</ul>
 									<ul>
 										<li> <input type="email" placeholder="Email" name="email" /> </li>
-										<li> <select name="gender">
+										 <select name="gender">
 												<option value="">- GENDER -</option>
 												<option value="0">Male</option>
 												<option value="1">Female</option>
-											     </select> </li>
+											     </select> 
 									</ul>
 									<ul >
 										<li> <input type="text" placeholder="weight" name="weight" /> </li>
