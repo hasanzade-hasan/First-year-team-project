@@ -95,6 +95,20 @@
 								echo substr( $row["Description"] , 0 , 50 );
 							?>
 						</div>
+						<div id="box2">
+								<h1> Recipe of the day </h1>										
+								<?php
+									$row=getdata(	"select * from RecipeName order by rand() limit 0 , 1 " , $conn);
+									$Photo = "";
+									if (file_exists("./images/recipe/" . $row["Photo"] . "")) { 
+										$Photo = "<img src=\"./images/recipe/" . $row["Photo"] . "\" style='width:80%;'>"; 
+									}
+									echo $row["RecipeName"] . "<br/ >";
+									echo $Photo . "<br/ >";
+									echo substr( $row["Description"] , 0 , 50 );
+								?>
+							</div>
+							
 						
 						<div id="box3">
 								<h1> Your meals for today </h1>
@@ -134,19 +148,6 @@
 							</div>
 						
 							
-							<div id="box2">
-								<h1> Recipe of the day </h1>										
-								<?php
-									$row=getdata(	"select * from RecipeName order by rand() limit 0 , 1 " , $conn);
-									$Photo = "";
-									if (file_exists("./images/recipe/" . $row["Photo"] . "")) { 
-										$Photo = "<img src=\"./images/recipe/" . $row["Photo"] . "\" style='width:80%;'>"; 
-									}
-									echo $row["RecipeName"] . "<br/ >";
-									echo $Photo . "<br/ >";
-									echo substr( $row["Description"] , 0 , 50 );
-								?>
-							</div>
 							
 					</div>
 					
