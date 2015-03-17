@@ -1407,7 +1407,7 @@ box-shadow: 6px -2px 6px 0px #888888;
 #calcfood{
 	width: 100%;
 	overflow: scroll;
-	height:65%;
+	height:25em;
 	background: #c2dadb;
 	margin:0;
 }

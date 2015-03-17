@@ -54,7 +54,7 @@
 				<input type="hidden" name="totalCal" value="0">
 				<input type="hidden" name="gid" value="">
 				<div id = "calcfood">
-				<table align='center' width='100%' border='1' cellspacing='1' cellpadding='3' height="70%" overflow="scroll" >
+				<table align='center' width='100%' border='1' cellspacing='1' cellpadding='3'  overflow="scroll" >
 								<tr>
 									<th style="text-align:center;">Food</th>
 									<th style="text-align:center;">Quantity</th>
