@@ -1189,7 +1189,7 @@ background: -ms-linear-gradient(top, rgba(98,157,209,1) 0%, rgba(98,157,209,1) 7
 background: linear-gradient(to bottom, rgba(98,157,209,1) 0%, rgba(98,157,209,1) 7%, rgba(183,222,237,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#629dd1', endColorstr='#b7deed', GradientType=0 );
 width: 82em;
-height:50em;
+height:55em;
 margin-right: auto;
 margin-left: auto;
 margin-top: 0;
