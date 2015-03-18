@@ -12,6 +12,8 @@
 			$mode = "";
 		}
 		if ($mode == "upWeight" ) {
+			if($Weight < 30 || $Weight > 400)
+				echo "<script>alert('Invalid weight(30 < Weight < 300');location.href='myprofile.php';</script>";
 			$res = mysqli_query( $conn , "update User set Weight=$Weight where UserID = '" . $_SESSION["sn_idx"] . "'");
 			if ($res) {
 				$_SESSION["sn_weight"] = $Weight ;
