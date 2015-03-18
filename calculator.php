@@ -34,7 +34,7 @@
 									$i = 1;
 									while ($row = mysqli_fetch_assoc($result)) {
 								?>								
-									<li id="Food_li_<?php echo $row["FoodID"];?>"><a href="#" onclick="addFood(<?php echo $row["FoodID"];?>);return false;"><?php echo $row["Name"];?></a></li>
+									<li id="Food_li_<?php echo $row["FoodID"];?>"><a href="#" onclick="addFood(<?php echo $row["FoodID"];?>);return false;"><?php echo $row["Name"]."(".$row["Portion"]."g) ".$row["Calories"]."Kcal";?></a></li>
 								<?php
 									$i++;
 									}
@@ -160,7 +160,7 @@
 
 			function cal(val){
 				var form=document.form2;
-				var i , mValue;alert("hi"); 
+				var i , mValue; 
 				var nChk = document.getElementsByName("Food_list");  
 				var mChk = document.getElementsByName("Portion");  
 				form.gid.value ='';
