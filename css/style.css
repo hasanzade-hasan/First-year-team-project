@@ -1204,7 +1204,7 @@ overflow:auto;
 
 
 #details{
-	
+	display: inline-table;
 	height: 34em;
 	width: 20em;
 	border: 1px #657172 solid;
