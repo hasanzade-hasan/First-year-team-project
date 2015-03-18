@@ -33,6 +33,11 @@
 		}
                 if($mode == "DeleteDiet") {
 			$res = mysqli_query( $conn, "delete from Diet where UserID = '" . $_SESSION["sn_idx"] . "'");
+			if ($res) {
+				echo "<script>alert('Set a new goal')location.href='myprofile.php'</script>";
+			}else {
+				echo "<script>alert('error');location.href='myprofile.php';</script>";
+      			}
                 }
 		?>
 					<div id = "content">
@@ -101,8 +106,13 @@
 								<?php
 								$Diet_info = getdata("select * from Diet where UserID='" . $_SESSION["sn_idx"] . "'" , $conn );
                                                                 if ( $Diet_info["TargetWeight"] > $_SESSION["sn_weight"]){								   
-									echo "You have reached your goal<br />";
+									echo "You have reached your goal<br />";?>
+							
+								        <form name='frm_regist' method="POST" action="myprofile.php">
+                                                                        <input type="hidden" name="mode" value="DietStart">
+                                                                        <li> TargetWeight: <input  placeholder="Kg" name="TargetWeight"
                                                                
+								<?php
 								}
 								if ( $Diet_info["StartDate"] != "" ) {?>
 									<li> Start date: <?php echo $Diet_info["StartDate"]?>    </li>
