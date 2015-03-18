@@ -88,7 +88,7 @@
 											}else {
 												$view_list = "none";
 											}
-											$cal_total += row["Calories"];	
+											$cal_total += $row["Calories"];	
 										}
 
 								?>
