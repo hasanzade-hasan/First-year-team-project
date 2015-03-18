@@ -178,15 +178,21 @@
 							}
 						}
 					}
-					if(form.gid.value ==''){ 
-						alert("list is empty");       
-						return false; 
-					}					
+					//if(form.gid.value ==''){ 
+					//	alert("list is empty");       
+					//	return false; 
+					//}					
 					sendRequest(
 						cal_result, '&mode=cal&gid='+ form.gid.value,
 						'POST',
 						'./calculator_.php', true, true
 					);
+
+					 if(form.gid.value ==''){
+                                                alert("list is empty");
+                                                return false;
+                                        }
+
 				}
 			}
 				function cal_result(oj){
