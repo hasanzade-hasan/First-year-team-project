@@ -135,7 +135,7 @@
 
 						
 							
-						<div id="box2">
+						<div id="box2l">
 								<h1> Recipe of the day </h1>										
 								<?php
 									$row=getdata(	"select * from RecipeName order by rand() limit 0 , 1 " , $conn);
