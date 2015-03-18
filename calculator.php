@@ -149,8 +149,8 @@
 			function addFood(val) {
 				document.getElementById("Food_list_"+val).checked=true;
 				document.getElementById("Food_row_"+val).style.display="";
-				document.getElementByID("Portion_list_"+val).innerHTML = 1;
-				cal(val);
+				//document.getElementByID("Portion_list_"+val).innerHTML = 1;
+				//cal(val);
 			}
 
 			function deleteFood(val) {
