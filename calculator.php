@@ -20,6 +20,11 @@
 		if($sdate != ""){
 		   	$sql = "select datediff(".$sdate.","."curdate())";
 			$res = mysqli_query( $conn, $sql) OR die(__FILE__." : Line ".__LINE__."<p>".mysql_error());
+
+			if(res < 0){
+				$sdate = "";
+                                echo "<script>alert('Cannot change/delete past data');location.href='calculator.php';</script>";
+			}
 		}
 ?>
 <script src="js/ajax.js"></script>

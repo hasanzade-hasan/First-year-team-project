@@ -13,7 +13,7 @@
 		}
 		if ($mode == "upWeight" ) {
 			if($Weight < 30 || $Weight > 400){
-				echo "<script>alert('Invalid weight(30 < Weight < 300');location.href='myprofile.php';</script>";
+				echo "<script>alert('Invalid weight(30 < Weight < 300)');location.href='myprofile.php';</script>";
 				exit;
 			}
 
@@ -32,7 +32,7 @@
 			exit;
 			}
 			if($TargetWeight < 30 || $TargetWeight > 400){
-                                echo "<script>alert('Invalid weight(30 < Weight < 300');location.href='myprofile.php';</script>";
+                                echo "<script>alert('Invalid weight(30 < Weight < 300)');location.href='myprofile.php';</script>";
 				exit;
 			}
 
