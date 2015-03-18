@@ -5,6 +5,17 @@ include "./config/query.php";
 if (!isset($gid)) {
 	$gid = "";
 }
+
+if($cDate1 != "")
+{
+  	$sql = "select datediff(".$cDate1.","."curdate())";
+	$res = mysqli_query( $conn, $sql);
+	if($res < 0){
+			 $cDate1 = "";
+      			 echo "<script>alert('Cannot change/delete past data');location.href='calculator.php';</script>";
+	}
+}
+
 if ($mode == "cal" ) {
 	if ( $gid == "" ) {
 		echo "empty required filed";
