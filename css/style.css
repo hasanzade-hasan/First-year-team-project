@@ -1270,7 +1270,7 @@ box-shadow: 6px -2px 6px 0px #888888;
 }
 
 #box2{
-	position:relative;
+	position:absolute;
 	display: inline-table;
 	float:right;
 	width: 23em;
@@ -1292,7 +1292,7 @@ box-shadow: 6px -2px 6px 0px #888888;
 }
 
 #box2l{
-	position:relative;
+	position:absolute;
 	display: inline-table;
 	float:left;
 	width: 23em;
