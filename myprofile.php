@@ -31,6 +31,9 @@
 			}
 			exit;
 		}
+                if($mode == "DeleteDiet") {
+			$res = mysqli_query( $conn, "delete from Diet where UserID = '" . $_SESSION["sn_idx"] . "'");
+                }
 		?>
 					<div id = "content">
 						<div id = "details">
