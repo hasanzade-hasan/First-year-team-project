@@ -91,18 +91,14 @@
 											}else {
 												$view_list = "none";
 											}
-										}else if($mode_frm == "add") {
+										}else {
 											$row_select = getdata( " select count(*) as cnt from  RecipeFoods where RecipeID='$rid' and FoodID='" . $row["FoodID"] . "' " , $conn );
 											if ($row_select["cnt"] > 0 ) {
 												$chk = " checked";
+												$cal_total += $row["Calories"];
 											}else {
 												$view_list = "none";
 											}
-											$cal_total += $row["Calories"];	
-										}
-										else
-										{
-											$view_list = "none";
 										}
 
 								?>
