@@ -1204,7 +1204,7 @@ overflow:auto;
 
 
 #details{
-	float:left;
+	
 	height: 34em;
 	width: 20em;
 	border: 1px #657172 solid;
@@ -1216,6 +1216,7 @@ box-shadow: 6px -2px 6px 0px #888888;
 	margin-top: 2em;
 	background: #c2dadb;
 	padding: 0.4em;
+	border-radius: 0.5em;
 }
 
 #details h1{
@@ -1267,7 +1268,7 @@ box-shadow: 6px -2px 6px 0px #888888;
 
 #box2{
 	display: inline-table;
-	float:middle;
+	
 	width: 23em;
 	height:17em;
 	border-color: #99FFCC;
@@ -1308,7 +1309,7 @@ box-shadow: 6px -2px 6px 0px #888888;
 
 #box3{
 	display: inline-table;
-	float: middle;
+	
 	width: 23em;
 	height:17em;
 	border-color: #99FFCC;
