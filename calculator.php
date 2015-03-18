@@ -87,7 +87,8 @@
 												$chk = " checked";
 											}else {
 												$view_list = "none";
-											}										
+											}
+											$cal_total += row["Calories"];	
 										}
 
 								?>
