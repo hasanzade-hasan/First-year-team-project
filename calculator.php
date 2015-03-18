@@ -148,7 +148,7 @@
 
 			function addFood(val) {
 				document.getElementById("Food_list_"+val).checked=true;
-				document.getElementById("Food_row_"+val).style.display="";
+				document.getElementById("Food_row_"+val).style.display="aaaaaaaaaaa";
 				cal(val);
 			}
 
