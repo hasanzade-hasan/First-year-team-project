@@ -97,6 +97,10 @@
 							<ul>
 								<?php
 								$Diet_info = getdata("select * from Diet where UserID='" . $_SESSION["sn_idx"] . "'" , $conn );
+                                                                if ( $Diet_info["TargetWeight"] > $_SESSION["sn_weight"]){								   
+									echo "You have reached your goal<br />";
+                                                               
+								}
 								if ( $Diet_info["StartDate"] != "" ) {?>
 									<li> Start date: <?php echo $Diet_info["StartDate"]?>    </li>
 									<li> TargetWeight: <?php echo $Diet_info["TargetWeight"]?> Kg   </li>							
