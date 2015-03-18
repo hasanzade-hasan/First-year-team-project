@@ -31,7 +31,7 @@
 				echo "<script>alert('Target weight should be greater than the current weight');location.href='myprofile.php';</script>";
 			exit;
 			}
-			if($Weight < 30 || $Weight > 400){
+			if($TargetWeight < 30 || $TargetWeight > 400){
                                 echo "<script>alert('Invalid weight(30 < Weight < 300');location.href='myprofile.php';</script>";
 				exit;
 			}
