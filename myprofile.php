@@ -22,6 +22,8 @@
 			exit;
 		}
 		if ($mode == "DietStart" ) {
+			if($TargetWeight < $_SESSION["sn_weight"])
+				echo "<script>"alert('Target weight should be greater than the current weight');location.href='myprofile.php';</script>";
 			$sql = "insert into Diet values('" . $_SESSION["sn_idx"]. "' , '".date("Y-m-d")."' , '$TargetWeight')";
 			$res = mysqli_query(  $conn , $sql );
 			if ($res) {
@@ -38,6 +40,7 @@
 			}else {
 				echo "<script>alert('error');location.href='myprofile.php';</script>";
       			}
+			exit;
                 }
 		?>
 					<div id = "content">
