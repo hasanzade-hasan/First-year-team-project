@@ -68,7 +68,7 @@
 									$quantity_dft = 1;
 									while ($row = mysqli_fetch_assoc($result)) {
 
-										$quantity_dft = "";
+										//$quantity_dft = "";
 										$chk = "";
 										$view_list = "";
 
