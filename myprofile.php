@@ -73,7 +73,7 @@
 									$result=mysqli_query( $conn, $sql ) OR die(__FILE__." : Line ".__LINE__."<p>".mysql_error());
 									while ($row = mysqli_fetch_assoc($result)) {
 										//$cal_res += $row["Quantity"] * $row["Calories"];
-										echo "<br />" . $row["Name"] . "<br />";
+										echo "<br />" . $row["Name"];
 									}
 								?>
 								</li>
@@ -83,7 +83,7 @@
 									$result=mysqli_query( $conn, $sql ) OR die(__FILE__." : Line ".__LINE__."<p>".mysql_error());
 									while ($row = mysqli_fetch_assoc($result)) {
 										//$cal_res += $row["Quantity"] * $row["Calories"];
-										echo "<br />" . $row["Name"] . "<br />";
+										echo "<br />" . $row["Name"];
 									}
 								?>
 								</li>
