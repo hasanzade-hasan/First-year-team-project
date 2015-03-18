@@ -1204,6 +1204,7 @@ overflow:auto;
 
 
 #details{
+	float:left;
 	position:relative;
 	display: inline-table;
 	height: 34em;
