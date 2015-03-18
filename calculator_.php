@@ -5,6 +5,7 @@ include "./config/query.php";
 if (!isset($gid)) {
 	$gid = "";
 }
+
 if ($mode == "cal" ) {
 	if ( $gid == "" ) {
 		echo "empty required filed";

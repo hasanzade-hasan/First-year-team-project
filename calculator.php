@@ -20,11 +20,10 @@
 		if($sdate != ""){
 		   	$sql = "select datediff(".$sdate.","."curdate())";
 			$res = mysqli_query( $conn, $sql) OR die(__FILE__." : Line ".__LINE__."<p>".mysql_error());
-			echo "<script>alert(".$res.");</script>";
-			if($res < 0){
-				$sdate = "";
-                                echo "<script>alert('Cannot change/delete past data');location.href='calculator.php';</script>";
-			}
+			//if($res < 0){
+			//	$sdate = "";
+                        //        echo "<script>alert('Cannot change/delete past data');location.href='calculator.php';</script>";
+			//}
 		}
 ?>
 <script src="js/ajax.js"></script>
@@ -186,35 +185,7 @@
 								form.gid.value = nChk[i].value+'|^|'+mValue;
 							}else{
 								form.gid.value =  form.gid.value+ ',' +nChk[i].value+'|^|'+mValue;
-							}
-						}
-					}
-					if(form.gid.value ==''){ 
-						alert("list is empty");       
-						return false; 
-					}					
-					sendRequest(
-						cal_result, '&mode=cal&gid='+ form.gid.value,
-						'POST',
-						'./calculator_.php', true, true
-					);
-				}
-			}
-				function cal_result(oj){
-					var res = decodeURIComponent(oj.responseText);
-					document.getElementById("TotalAmmount").innerHTML=res;
-					document.form2.totalCal.value=res;
-				}
-
-				function add_calendar(){
-					var frm=document.form2;
-					if (frm.totalCal.value == 0 ) {
-						alert("insert Quantity");
-						return false;
-					}else if (document.getElementById("Meal").value=="") {
-						alert("Choose Meal");
-						return false;
-					}else if ( frm.cDate1.value == "" ) {
+							cDate1.value == "" ) {
 						alert("Choose Date");
 						return false;
 					}else 
