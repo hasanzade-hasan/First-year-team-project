@@ -110,7 +110,9 @@
 							
 								        <form name='frm_regist' method="POST" action="myprofile.php">
                                                                         <input type="hidden" name="mode" value="DietStart">
-                                                                        <li> TargetWeight: <input  placeholder="Kg" name="TargetWeight"
+                                                                        <li> TargetWeight: <input  placeholder="Kg" name="TargetWeight"></li>
+									<input type="submit" value="New Diet Start" />
+									</form>
                                                                
 								<?php
 								}
