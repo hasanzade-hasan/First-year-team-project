@@ -1204,6 +1204,7 @@ overflow:auto;
 
 
 #details{
+	position:relative;
 	display: inline-table;
 	height: 34em;
 	width: 20em;
@@ -1268,6 +1269,7 @@ box-shadow: 6px -2px 6px 0px #888888;
 }
 
 #box2{
+	position:relative;
 	display: inline-table;
 	float:right;
 	width: 23em;
@@ -1328,6 +1330,7 @@ box-shadow: 6px -2px 6px 0px #888888;
 	margin-top: 2em;
 	margin-right:1em;
 	margin-left:1em;
+	position:relative;
 }
 
 
