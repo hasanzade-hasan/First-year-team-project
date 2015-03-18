@@ -102,7 +102,7 @@
 									$i++;
 									}
 								?>
-							cal();
+							<script> cal(); </script>
 							</table>
 				</div>
 				<div id = "total">
