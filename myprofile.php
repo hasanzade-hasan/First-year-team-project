@@ -109,9 +109,8 @@
 									echo "You have reached your goal<br />";?>
 							
 								        <form name='frm_regist' method="POST" action="myprofile.php">
-                                                                        <input type="hidden" name="mode" value="DietStart">
-                                                                        <li> TargetWeight: <input  placeholder="Kg" name="TargetWeight"></li>
-									<input type="submit" value="New Diet Start" />
+                                                                        <input type="hidden" name="mode" value="DeleteDiet">
+									<input type="submit" value="Set a new goal" />
 									</form>
                                                                
 								<?php
