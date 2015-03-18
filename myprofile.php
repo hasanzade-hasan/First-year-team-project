@@ -76,24 +76,6 @@
 							</ul>
 
 							</div>
-
-						<div id="box2">
-							<h1> exercise of the day </h1>									
-							<?php
-								$row=getdata(	"select * from ExercisesTable order by rand() limit 0 , 1 " , $conn);
-								$Photo = "";
-								$media_height=210;
-								$media_width=354;
-
-								if( $row["Photo"] != "") { 
-										$Photo = "<iframe width=\"$media_width\" height=\"$media_height\" src=\"" . $row["Photo"] ."\" frameborder=\"0\" allowfullscreen></iframe>"; 
-								}
-								echo $row["ExerciseName"] . "<br/ >";
-								echo $Photo . "<br/ >";
-								echo substr( $row["Description"] , 0 , 50 );
-							?>
-						</div>
-
 						<div id="box3">
 								<h1> Your meals for today </h1>
 								<ul>
@@ -130,6 +112,25 @@
 							</ul>
 
 							</div>
+
+						<div id="box2">
+							<h1> exercise of the day </h1>									
+							<?php
+								$row=getdata(	"select * from ExercisesTable order by rand() limit 0 , 1 " , $conn);
+								$Photo = "";
+								$media_height=210;
+								$media_width=354;
+
+								if( $row["Photo"] != "") { 
+										$Photo = "<iframe width=\"$media_width\" height=\"$media_height\" src=\"" . $row["Photo"] ."\" frameborder=\"0\" allowfullscreen></iframe>"; 
+								}
+								echo $row["ExerciseName"] . "<br/ >";
+								echo $Photo . "<br/ >";
+								echo substr( $row["Description"] , 0 , 50 );
+							?>
+						</div>
+
+						
 
 						
 							
