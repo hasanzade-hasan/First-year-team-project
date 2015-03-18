@@ -18,7 +18,7 @@
 		}
 
 		if($sdate != ""){
-		   	$sql = "select datediff(".$sdate.","."curdate())"
+		   	$sql = "select datediff(".$sdate.","."curdate())";
 			$res = mysqli_query( $conn, $sql) OR die(__FILE__." : Line ".__LINE__."<p>".mysql_error());
 		}
 ?>
