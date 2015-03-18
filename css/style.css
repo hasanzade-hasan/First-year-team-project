@@ -1268,7 +1268,7 @@ box-shadow: 6px -2px 6px 0px #888888;
 
 #box2{
 	display: inline-table;
-	
+	clear:both;
 	width: 23em;
 	height:17em;
 	border-color: #99FFCC;
@@ -1309,7 +1309,7 @@ box-shadow: 6px -2px 6px 0px #888888;
 
 #box3{
 	display: inline-table;
-	
+	clear:both;
 	width: 23em;
 	height:17em;
 	border-color: #99FFCC;
