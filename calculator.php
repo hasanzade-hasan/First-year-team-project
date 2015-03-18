@@ -160,7 +160,7 @@
 
 			function cal(val){
 				var form=document.form2;
-				var i , mValue; 
+				var i , mValue;alert("hi"); 
 				var nChk = document.getElementsByName("Food_list");  
 				var mChk = document.getElementsByName("Portion");  
 				form.gid.value ='';
