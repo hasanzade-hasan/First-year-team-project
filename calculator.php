@@ -33,8 +33,8 @@
 									$result=mysqli_query( $conn, $sql ) OR die(__FILE__." : Line ".__LINE__."<p>".mysql_error());
 									$i = 1;
 									while ($row = mysqli_fetch_assoc($result)) {
-								?>								
-									<li id="Food_li_<?php echo $row["FoodID"];?>"><a href="#" onclick="addFood(<?php echo $row["FoodID"];?>);return false;"><?php echo $row["Name"];?></a></li>
+								?>
+								<li id="Food_li_<?php echo $row["FoodID"];?>"><a href="#" onclick="addFood(<?php echo $row["FoodID"];?>);return false;"><?php echo $row["Name"]."(".$row["Portion"]."g) ".$row["Calories"]."Kcal";?></a></li>								
 								<?php
 									$i++;
 									}
