@@ -55,6 +55,45 @@
 							</ul>
 							</div>
 
+
+<div id="box3">
+							<h1> Start a diet </h1>
+							<ul>
+								<?php
+								$Diet_info = getdata("select * from Diet where UserID='" . $_SESSION["sn_idx"] . "'" , $conn );
+								if ( $Diet_info["StartDate"] != "" ) {?>
+									<li> Start date: <?php echo $Diet_info["StartDate"]?>    </li>
+									<li> TargetWeight: <?php echo $Diet_info["TargetWeight"]?> Kg   </li>							
+								<?php
+								}else{?>
+									<form name='frm_regist' method="POST" action="myprofile.php">
+									<input type="hidden" name="mode" value="DietStart">
+									<li> TargetWeight: <input  placeholder="Kg" name="TargetWeight"></li>
+									<input type="submit" value="New Diet Start" />
+									</form>
+								<?php
+								}?>
+							</ul>
+
+							</div>
+
+						<div id="box2">
+							<h1> exercise of the day </h1>									
+							<?php
+								$row=getdata(	"select * from ExercisesTable order by rand() limit 0 , 1 " , $conn);
+								$Photo = "";
+								$media_height=210;
+								$media_width=354;
+
+								if( $row["Photo"] != "") { 
+										$Photo = "<iframe width=\"$media_width\" height=\"$media_height\" src=\"" . $row["Photo"] ."\" frameborder=\"0\" allowfullscreen></iframe>"; 
+								}
+								echo $row["ExerciseName"] . "<br/ >";
+								echo $Photo . "<br/ >";
+								echo substr( $row["Description"] , 0 , 50 );
+							?>
+						</div>
+
 						<div id="box3">
 								<h1> Your meals for today </h1>
 								<ul>
@@ -111,43 +150,9 @@
 					
 
 
-						<div id="box2">
-							<h1> exercise of the day </h1>									
-							<?php
-								$row=getdata(	"select * from ExercisesTable order by rand() limit 0 , 1 " , $conn);
-								$Photo = "";
-								$media_height=210;
-								$media_width=354;
-
-								if( $row["Photo"] != "") { 
-										$Photo = "<iframe width=\"$media_width\" height=\"$media_height\" src=\"" . $row["Photo"] ."\" frameborder=\"0\" allowfullscreen></iframe>"; 
-								}
-								echo $row["ExerciseName"] . "<br/ >";
-								echo $Photo . "<br/ >";
-								echo substr( $row["Description"] , 0 , 50 );
-							?>
-						</div>
 						
-						<div id="box3">
-							<h1> Start a diet </h1>
-							<ul>
-								<?php
-								$Diet_info = getdata("select * from Diet where UserID='" . $_SESSION["sn_idx"] . "'" , $conn );
-								if ( $Diet_info["StartDate"] != "" ) {?>
-									<li> Start date: <?php echo $Diet_info["StartDate"]?>    </li>
-									<li> TargetWeight: <?php echo $Diet_info["TargetWeight"]?> Kg   </li>							
-								<?php
-								}else{?>
-									<form name='frm_regist' method="POST" action="myprofile.php">
-									<input type="hidden" name="mode" value="DietStart">
-									<li> TargetWeight: <input  placeholder="Kg" name="TargetWeight"></li>
-									<input type="submit" value="New Diet Start" />
-									</form>
-								<?php
-								}?>
-							</ul>
-
-							</div>
+						
+						
 						
 						
 							
