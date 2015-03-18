@@ -75,7 +75,7 @@
 						    <tr>
 						      <td>Unicorn Grocery</td>
 						      <td>
-						        <a href="http://www.unicorn-grocery.coop/contact.php" class="button">more information...</a>
+						        <a href="http://www.unicorn-grocery.coop" class="button">more information...</a>
 						      </td>
 						    </tr>
 						    <tr>
