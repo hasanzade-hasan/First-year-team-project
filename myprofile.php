@@ -126,8 +126,9 @@
 										$Photo = "<iframe width=\"$media_width\" height=\"$media_height\" src=\"" . $row["Photo"] ."\" frameborder=\"0\" allowfullscreen></iframe>"; 
 								}
 								echo $row["ExerciseName"] . "<br/ >";
-								echo $Photo . "<br/ >";
+								//echo $Photo . "<br/ >";
 								echo substr( $row["Description"] , 0 , 50 );
+                                                                echo $Photo;
 							?>
 						</div>
 
