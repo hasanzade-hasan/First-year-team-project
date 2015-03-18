@@ -1269,13 +1269,13 @@ box-shadow: 6px -2px 6px 0px #888888;
 
 #box2{
 	display: inline-table;
-
+	float:right;
 	width: 23em;
 	height:17em;
 	border-color: #99FFCC;
 	border: 1px #657172 solid;
 	margin-left:1em;
-	margin-right:2em;
+	margin-right:1em;
 
 -moz-box-shadow: 6px -2px 6px 0px #888888;
 -webkit-box-shadow: 6px -2px 6px 0px #888888;
@@ -1311,7 +1311,7 @@ box-shadow: 6px -2px 6px 0px #888888;
 
 #box3{
 	display: inline-table;
-
+	float:middle;
 	width: 23em;
 	height:17em;
 	border-color: #99FFCC;
@@ -1327,7 +1327,7 @@ box-shadow: 6px -2px 6px 0px #888888;
 	background: #c2dadb; 
 	margin-top: 3em;
 	margin-right:1em;
-	margin-left:2em;
+	margin-left:1em;
 }
 
 
