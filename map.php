@@ -45,7 +45,7 @@
 		<!-- One -->
 			<section id="one" class="wrapper style1">
 				<header class="major">
-					<h2>MAP</h2>
+					<h2>Healthy Manchester Map</h2>
 					<div>
 						<iframe id = "map" src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d9497.331844758186!2d-2.2394708613769536!3d53.480380344677535!3m2!1i1024!2i768!4f13.1!2m1!1sgyms+in+manchester!5e0!3m2!1sen!2suk!4v1425048709036" width="800" height="450" frameborder="0" style="border:0"></iframe>				
 					</div>
