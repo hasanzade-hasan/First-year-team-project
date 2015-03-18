@@ -18,7 +18,8 @@ if (!isset($gid)) {
 
 if ($mode == "cal" ) {
 	if ( $gid == "" ) {
-		echo "empty required filed";
+		echo "0";
+		//echo "empty required filed";
 	}else {
 		$food_list = array();
 		$total_cal = 0;
