@@ -73,6 +73,12 @@
 						      </td>
 						    </tr>
 						    <tr>
+						      <td>Unicorn Grocery</td>
+						      <td>
+						        <a href="http://www.unicorn-grocery.coop/contact.php" class="button">more information...</a>
+						      </td>
+						    </tr>
+						    <tr>
 						      <td>Manchester Aquatics Centre</td>
 						      <td>
 						        <a href="http://www.better.org.uk/leisure/manchester-aquatics-centre#/" class="button">more information...</a>
