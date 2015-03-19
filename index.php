@@ -54,7 +54,7 @@ include "./config/query.php";
 					<ul class="actions">
 					<?php 
 					if ( isset($_SESSION["sn_idx"]) ) {?>
-						<li><span href="#" class="button big special" id="toggle-login" onclick="javascript:location.href='./myprofile.php';">Go Myprofile</span></li>
+						<li><span href="#" class="button big special" id="toggle-login" onclick="javascript:location.href='./myprofile.php';">Go to Myprofile</span></li>
 					<?php
 					} else {?>
 						<li><span href="#" class="button big special" id="toggle-login">Log in</span> <div id="login">
