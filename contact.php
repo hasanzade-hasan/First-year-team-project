@@ -10,7 +10,7 @@
 				<div id = "main">
 					<div id="box">
 						
-						<img src="images/salad.jpg" width ="100%">
+						<img src="images/Colm.jpg" width ="100%">
 						<h3>Colm Mallom </h3>
 						<p>Hi my name is Colm Mallon. I am a Computer Science Masters student at the University of Manchester. I am currently a first year on the program. I have 4 years programming experience with Java, python, vb.net, ARM and PASCAL programming languages all included.</p>
 					</div>
