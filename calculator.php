@@ -82,7 +82,7 @@
 												$view_list = "none";
 											}
 							
-											if ( $quantity_dft = "")
+											if ( $quantity_dft == "")
 												$quantity_dft=1;
 
 										}else {
