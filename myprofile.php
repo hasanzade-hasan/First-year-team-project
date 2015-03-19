@@ -184,7 +184,7 @@
 									}
 									echo $row["RecipeName"] . "<br/ >";
 									echo $Photo . "<br/ >";
-									echo substr( $row["Description"] , 0 , 50 );
+									//echo substr( $row["Description"] , 0 , 50 );
 								?>
 							</div>
 							
