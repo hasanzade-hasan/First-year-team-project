@@ -81,6 +81,10 @@
 											}else {
 												$view_list = "none";
 											}
+							
+											if ( $quantity_dft = "")
+												$quantity_dft=1;
+
 										}else {
 											$row_select = getdata( " select count(*) as cnt from  RecipeFoods where RecipeID='$rid' and FoodID='" . $row["FoodID"] . "' " , $conn );
 											if ($row_select["cnt"] > 0 ) {
@@ -103,7 +107,6 @@
 								<?php
 									$i++;
 									}
-									$mode_frm="add";
 								?>
 							</table>
 				</div>
