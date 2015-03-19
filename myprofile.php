@@ -28,7 +28,7 @@
 		}
 		if ($mode == "DietStart" ) {
 			if($TargetWeight > $_SESSION["sn_weight"]){
-				echo "<script>alert('Target weight should be greater than the current weight');location.href='myprofile.php';</script>";
+				echo "<script>alert('Target weight should be less than the current weight');location.href='myprofile.php';</script>";
 			exit;
 			}
 			if($TargetWeight < 30 || $TargetWeight > 400){
@@ -62,8 +62,8 @@
 								<li> Name: <?php echo $_SESSION["sn_name"];?>    </li>
 								<li> Surname: <?php echo $_SESSION["sn_surname"];?>    </li>
 								<li> Gender: <?php echo ( $_SESSION["sn_gender"] == "0" ) ? "Male" : "Female"; ?>    </li>
-								<li> Current weight: <?php echo $_SESSION["sn_weight"] ;?>    </li>
-								<li> current height: <?php echo $_SESSION["sn_height"];?>    </li>
+								<li> Current weight: <?php echo $_SESSION["sn_weight"] ;?> kg  </li>
+								<li> Current height: <?php echo $_SESSION["sn_height"];?> cm   </li>
 								<li> Update weight: </li>
 								
 							
@@ -90,7 +90,7 @@
 									}
 								?>
 								</li>
-								<li> lunch:     				
+								<li> Lunch:     				
 								<?php 
 									$sql="select * from DietFoods, Food where DietFoods.FoodID=Food.FoodID and UserID='" . $_SESSION["sn_idx"]. "' and `Date`='" . date("Y-m-d") . "' and Meal='L'";
 									$result=mysqli_query( $conn, $sql ) OR die(__FILE__." : Line ".__LINE__."<p>".mysql_error());
@@ -100,7 +100,7 @@
 									}
 								?>
 								</li>
-								<li> dinner: 				
+								<li> Dinner: 				
 								<?php 
 									$sql="select * from DietFoods, Food where DietFoods.FoodID=Food.FoodID and UserID='" . $_SESSION["sn_idx"]. "' and `Date`='" . date("Y-m-d") . "' and Meal='D'";
 									$result=mysqli_query( $conn, $sql ) OR die(__FILE__." : Line ".__LINE__."<p>".mysql_error());
@@ -132,12 +132,12 @@
 								}
 								if ( $Diet_info["StartDate"] != "" ) {?>
 									<li> Start date: <?php echo $Diet_info["StartDate"]?>    </li>
-									<li> TargetWeight: <?php echo $Diet_info["TargetWeight"]?> Kg   </li>							
+									<li> Target Weight: <?php echo $Diet_info["TargetWeight"]?> kg   </li>							
 								<?php
 								}else{?>
 									<form name='frm_regist' method="POST" action="myprofile.php">
 									<input type="hidden" name="mode" value="DietStart">
-									<li> TargetWeight: <input  placeholder="Kg" name="TargetWeight"></li>
+									<li> Target Weight: <input  placeholder="Kg" name="TargetWeight"></li>
 									<input type="submit" value="New Diet Start" />
 									</form>
 								<?php
@@ -165,10 +165,7 @@
 							?>
 						</div>
 
-						
 
-						
-							
 						<div id="box2l">
 								<h1> Recipe of the day </h1>										
 								<?php
@@ -183,15 +180,7 @@
 								?>
 							</div>
 							
-					
 
-
-						
-						
-						
-						
-						
-							
 							
 					</div>
 					
