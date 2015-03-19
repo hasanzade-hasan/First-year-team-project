@@ -75,7 +75,7 @@
 								<li> Update weight: </li>
 								
 							
-								<form name='frm_regist' method="POST" action="myprofile.php">
+								<form id="upWeight" name='frm_regist' method="POST" action="myprofile.php">
 									<input type="hidden" name="mode" value="upWeight">
 								<il><input  placeholder="Weight" name="Weight"></il>
 								<il>	<input type="submit" value="update" /> </il>
