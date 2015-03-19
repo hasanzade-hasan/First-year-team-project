@@ -116,19 +116,19 @@ include "./config/query.php";
 				<div id = "main">
 					<div id="box">
 						
-						<img src="images/salad.jpg" width ="100%">
-						<h3>RECIPES</h3>
-						<p>Nullam quis eleifend lectus. Suspendisse et lacus placerat, suscipit erat id, ullamcorper nisl. Maecenas gravida dictum fringilla. Phasellus lobortis, felis id accumsan condimentum, magna erat malesuada ligula, quis egestas urna nisl nec velit. Etiam at metus sit amet ex feugiat tincidunt.</p>
+						<img src="images/diet.jpg" width ="100%">
+						<h3>PLAN YOUR DIET</h3>
+						<p>Manage your diet in one convenient space with our calendar function. YOu can add food and exercises to your timetable and design your own weight loss strategy.</p>
 					</div>
 					<div id="box">
 						<img src="images/work.jpg" width ="100%">
-						<h3>EXERCISES</h3>
-						<p>Nullam quis eleifend lectus. Suspendisse et lacus placerat, suscipit erat id, ullamcorper nisl. Maecenas gravida dictum fringilla. Phasellus lobortis, felis id accumsan condimentum, magna erat malesuada ligula, quis egestas urna nisl nec velit. Etiam at metus sit amet ex feugiat tincidunt.</p>
+						<h3>LIVE HEALTHY</h3>
+						<p>Find places to exercise a healthy lifestyle on our Healthy Manchester Map and suggestions. We aim to make it easy for you to take the initiative and change your habits.</p>
 						</div>
 					<div id="box">
-						<img src="images/diet.jpg" width ="100%">
-						<h3>A PERSONAL CALENDAR</h3>
-						<p>Nullam quis eleifend lectus. Suspendisse et lacus placerat, suscipit erat id, ullamcorper nisl. Maecenas gravida dictum fringilla. Phasellus lobortis, felis id accumsan condimentum, magna erat malesuada ligula, quis egestas urna nisl nec velit. Etiam at metus sit amet ex feugiat tincidunt.</p>
+						<img src="images/salad.jpg" width ="100%">
+						<h3>MONITOR YOUR PROGRESS</h3>
+						<p>Enter and update your weight to see your progress towards the target you set for yourself. Manage your calorie intake with our handy calorie calculator to know exactly how much you are eating.</p>
 					</div>
 		
 				</div>
