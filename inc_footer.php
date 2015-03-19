@@ -16,7 +16,7 @@
 						<li>
 						<ul class="icons">
 								<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="https://www.facebook.com/groups/338248203002689/?fref=ts" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+								<li><a href="https://www.facebook.com/groups/338248203002689/?fref=ts" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
 								<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 								
 							</ul>
