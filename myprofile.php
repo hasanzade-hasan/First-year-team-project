@@ -12,6 +12,9 @@
 			$mode = "";
 		}
 		if ($mode == "upWeight" ) {
+			if(!is_numeric($Weight)){
+				echo "<script>alert('Only numeric values are allowd');location.href='myprofile.php';</script>";
+			}
 			if($Weight < 30 || $Weight > 400){
 				echo "<script>alert('Invalid weight(30 < Weight < 300)');location.href='myprofile.php';</script>";
 				exit;
