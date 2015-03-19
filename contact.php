@@ -21,7 +21,7 @@
 						<p>Nullam quis eleifend lectus. Suspendisse et lacus placerat, suscipit erat id, ullamcorper nisl. Maecenas gravida dictum fringilla. Phasellus lobortis, felis id accumsan condimentum, magna erat malesuada ligula, quis egestas urna nisl nec velit. Etiam at metus sit amet ex feugiat tincidunt.</p>
 						</div>
 					<div id="box">
-						<img src="images/diet.jpg" width ="100%">
+						<img src="images/CrisContactPhoto.jpg" width ="100%">
 						<h3>Cristian Brisan</h3>
 						<p>Hi, I am Cris! I, along with Colm and Dong, am in charge of the backend side of our website. This means that whenever you have any complaints or suggestions about the data we have provided you on foods, diets or exercises it's me you should talk to :). My email is: cristian.brisan@student.manchester.ac.uk </p>
 					</div>
