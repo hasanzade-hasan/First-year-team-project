@@ -103,6 +103,7 @@
 								<?php
 									$i++;
 									}
+									$mode_frm="add";
 								?>
 							</table>
 				</div>
