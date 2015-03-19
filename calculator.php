@@ -65,10 +65,10 @@
 									$sql = "select * from Food order by Name ASC";
 									$result=mysqli_query( $conn, $sql ) OR die(__FILE__." : Line ".__LINE__."<p>".mysql_error());
 									$i = 1;
-									$quantity_dft = 1;
+									//$quantity_dft = 1;
 									while ($row = mysqli_fetch_assoc($result)) {
 
-										//$quantity_dft = "";
+										$quantity_dft = "";
 										$chk = "";
 										$view_list = "";
 
@@ -88,7 +88,9 @@
 												$cal_total += $row["Calories"];
 											}else {
 												$view_list = "none";
-											}										
+											}	
+
+											$quantity_dft=1;
 										}
 
 								?>
@@ -150,7 +152,7 @@
 				document.getElementById("Food_list_"+val).checked=true;
 				document.getElementById("Food_row_"+val).style.display="";
 				//document.getElementByID("Portion_list_"+val).innerHTML = 1;
-				//cal(val);
+				cal(val);
 			}
 
 			function deleteFood(val) {
