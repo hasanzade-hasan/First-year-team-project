@@ -23,13 +23,13 @@
 					<div id="box">
 						<img class="boxImg" src="images/CrisContactPhoto.jpg" width ="100%">
 						<h3>Cristian Brisan</h3>
-						<p>Hi, I am Cris! I, along with Colm and Dong, am in charge of the backend side of our website. This means that whenever you have complaints or suggestions about the data we have provided you on foods, diets or exercises it's me you should talk to. <br>My email is: cristian.brisan@student.manchester.ac.uk </p>
+						<p>Hi, I am Cris! I, along with Colm and Dong, am in charge of the backend side of our website. This means that whenever you have any complaints or suggestions about the data we have provided you on foods, diets or exercises it's me you should talk to :). <br>My email is: cristian.brisan@student.manchester.ac.uk </p>
 					</div>
 					<div id="box">
 						
 						<img class="boxImg" src="images/Hasan.jpg" width ="100%">
 						<h3>Hasan Hasanzade </h3>
-						<p>Hello, I am Hasan. I was working on this project with other five guys you see here. I did front-end part of this website together with Roberto and Ulrich. I am not sure this is perfect design, if you have any suggestions email me here: hasan.hasanzade@student.manchester.ac.uk</p>
+						<p>Hello, I am Hasan. I was working on this project with other five guys you see here. I did front-end part of this website together with Roberto and Ulrich. I am not sure this is perfect design, if you have any suggestions email me here: <i>hasan.hasanzade@student.manchester.ac.uk</i></p>
 					</div>
 					<div id="box">
 						<img class="boxImg" src="images/Eun.jpg" width ="100%">
