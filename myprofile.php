@@ -83,11 +83,11 @@
 						
 
 
-							</ul style="list-style: none;">
+							</ul >
 							</div>
 						<div id="box3">
 								<h1> Your meals for today </h1>
-								<ul>
+								<ul style="list-style: none;">
 								<li> Breakfast: 													
 								<?php 
 									$sql="select * from DietFoods, Food where DietFoods.FoodID=Food.FoodID and UserID='" . $_SESSION["sn_idx"]. "' and `Date`='" . date("Y-m-d") . "' and Meal='B'";
