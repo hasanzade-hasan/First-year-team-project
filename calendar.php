@@ -60,6 +60,7 @@
 		  text-shadow: 0 1px 0 #000;  
 		  text-align: center !important;
   		padding-top: 10px !important;
+  		font-size: 20px !important;
 		}
 
 		th:first-child {

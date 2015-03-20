@@ -66,7 +66,7 @@
 					<div id = "content">
 						<div id = "details">
 							<h1> Personal details </h1>
-							<ul>
+							<ul style="list-style: none;">
 								<li> Name: <?php echo $_SESSION["sn_name"];?>    </li>
 								<li> Surname: <?php echo $_SESSION["sn_surname"];?>    </li>
 								<li> Gender: <?php echo ( $_SESSION["sn_gender"] == "0" ) ? "Male" : "Female"; ?>    </li>
@@ -83,7 +83,7 @@
 						
 
 
-							</ul>
+							</ul style="list-style: none;">
 							</div>
 						<div id="box3">
 								<h1> Your meals for today </h1>
@@ -125,7 +125,7 @@
 
 <div id="box3">
 							<h1> Start a diet </h1>
-							<ul>
+							<ul style="list-style: none;">
 								<?php
 								$Diet_info = getdata("select * from Diet where UserID='" . $_SESSION["sn_idx"] . "'" , $conn );
                                                                 if ( $Diet_info["TargetWeight"] > $_SESSION["sn_weight"]){								   
