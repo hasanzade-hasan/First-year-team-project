@@ -143,7 +143,7 @@
 									<li> Target Weight: <?php echo $Diet_info["TargetWeight"]?> kg   </li>							
 								<?php
 								}else{?>
-									<form name='frm_regist' method="POST" action="myprofile.php">
+									<form id="upWeight" name='frm_regist' method="POST" action="myprofile.php">
 									<input type="hidden" name="mode" value="DietStart">
 									<li> Target Weight: <input  placeholder="Kg" name="TargetWeight"></li>
 									<input type="submit" value="New Diet Start" />
