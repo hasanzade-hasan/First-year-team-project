@@ -167,7 +167,13 @@
         <tr id = "row_idx_<?php echo $i+1;?>">
           <td>
             <span class = "date"><?php echo $view_date;?></span>
+			<?php
+				if (strtotime($list_date) >= strtotime(date("Y-m-d"))) {
+			?>
             <button class = "add" type="button" onclick = "window.location.href='calculator.php?sdate=<?php echo $list_date;?>'">Add food</button>
+			<?php
+				}
+			?>
           </td>
 
           <td class = "cell">
