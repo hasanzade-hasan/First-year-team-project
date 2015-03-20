@@ -29,7 +29,7 @@
 						
 						<img class="boxImg" src="images/Hasan.jpg" width ="100%">
 						<h3>Hasan Hasanzade </h3>
-						<p>Hello, I am Hasan. I was working on this project with six guys you see here. I did front-end part of this website together with Roberto and Ulrich. I am not sure this is perfect design, if you have any suggestions email me here: hasan.hasanzade@student.manchester.ac.uk</p>
+						<p>Hello, I am Hasan. I was working on this project with other five guys you see here. I did front-end part of this website together with Roberto and Ulrich. I am not sure this is perfect design, if you have any suggestions email me here: hasan.hasanzade@student.manchester.ac.uk</p>
 					</div>
 					<div id="box">
 						<img class="boxImg" src="images/Eun.jpg" width ="100%">
