@@ -7,12 +7,16 @@ if ($mode == "regist" ) {
 		echo "empty required filed";
 	}elseif ( $pass1 != $pass2 ) {
 		echo "failure password matching";	
+	}elseif ( !is_numeric($weight) ||  !is_numeric($height) ) {
+		echo "incorrect value";	
 	}else {
 		$user_dist = getdata("select count(*) as cnt from User where Email='$email' " , $conn );
 		if ($user_dist["cnt"] > 0 ) {
 			echo "Email is already subscribed";
 		}else {		
 			$sql = "insert into User set Email = '$email' , Name = '$rname' , Surname = '$surname' , Gender = '$gender' , Weight = '$weight' , Height = '$height' , Password = '" . md5( $pass1 ) . "' ";
+			//echo $sql;
+			//exit;
 			$res = mysqli_query( $conn , $sql);
 			if ($res) {
 				$user_info = getdata("select * from User where Email='$email' " , $conn );
@@ -46,6 +50,6 @@ if ($mode == "regist" ) {
 	}
 }elseif ($mode == "logout" ) {
 	session_unset();
-	echo "<script>location.href = './index.php';</script>";
+	echo "<script>location.href = '/';</script>";
 }
 ?>
