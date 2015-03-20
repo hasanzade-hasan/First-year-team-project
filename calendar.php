@@ -186,7 +186,7 @@
 					$remove_B = true;
 				}
 			?>
-			<?php if ($remove_B == true ) {?>
+			<?php if ($remove_B == true && strtotime($list_date) >= strtotime(date("Y-m-d"))) {?>
             <button type="button" onclick = "window.location.href='./calculator.php?rm=B&sdate=<?php echo $list_date?>';">Edit</button>
             <button type="button" onclick = "window.location.href='./calculator_.php?mode=del&rm=B&sdate=<?php echo $list_date?>';">Remove</button>
 			<?php }?>
@@ -202,7 +202,7 @@
 					$remove_L = true;
 				}
 			?>
-			<?php if ($remove_L == true ) {?>
+			<?php if ($remove_L == true && strtotime($list_date) >= strtotime(date("Y-m-d")) ) {?>
             <button type="button" onclick = "window.location.href='./calculator.php?rm=L&sdate=<?php echo $list_date?>';">Edit</button>
             <button type="button" onclick = "window.location.href='./calculator_.php?mode=del&rm=L&sdate=<?php echo $list_date?>';">Remove</button>
 			<?php }?>
@@ -218,7 +218,7 @@
 					$remove_D = true;
 				}
 			?>
-			<?php if ($remove_D == true ) {?>
+			<?php if ($remove_D == true && strtotime($list_date) >= strtotime(date("Y-m-d")) ) {?>
             <button type="button" onclick = "window.location.href='./calculator.php?rm=D&sdate=<?php echo $list_date?>';">Edit</button>
             <button type="button" onclick = "window.location.href='./calculator_.php?mode=del&rm=D&sdate=<?php echo $list_date?>';">Remove</button>
 			<?php }?>
@@ -233,12 +233,18 @@
 					$remove_E = true;
 				}
 			?>
+<?php
+				if (strtotime($list_date) >= strtotime(date("Y-m-d"))) {
+			?>
+
             <button class = "add_exercise" type="button" onclick = "window.location.href='exercises.php?sdate=<?php echo $start_date;?>&idate=<?php echo $list_date;?>';">Add exercise</button>
 			<?php if ($remove_E == true ) {?>
             <button class = "remove_exercise" type="button" onclick = "window.location.href='calendar.php?sdate=<?php echo $start_date;?>&idate=<?php echo $list_date;?>&mode=exdel';">Remove</button>
 			<?php }?>
           </td>
-          
+<?php
+}
+?>          
           <td><?php echo number_format( $cal_res) ;?></td>
         </tr>
 		<?php
