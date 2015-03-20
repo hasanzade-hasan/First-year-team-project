@@ -8,8 +8,13 @@ if ($mode == "regist" ) {
 	}elseif ( $pass1 != $pass2 ) {
 		echo "failure password matching";	
 	}elseif ( !is_numeric($weight) ||  !is_numeric($height) ) {
-		echo "incorrect value";	
-	}else {
+		echo "incorrect value";
+	}elseif ( $weight < 50 || $weight > 300)
+		echo "Weight should be greater than 50kg and less than 300kg";	
+	}elseif ($height < 100 || $height >300){
+		echo "Height should be greater than 100cm and less than 300cm";
+	}
+	else {
 		$user_dist = getdata("select count(*) as cnt from User where Email='$email' " , $conn );
 		if ($user_dist["cnt"] > 0 ) {
 			echo "Email is already subscribed";
