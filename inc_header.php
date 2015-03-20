@@ -27,7 +27,7 @@ include "./config/query.php";
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
-			<link rel="shortcut icon" href="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xpa1/t31.0-8/s960x960/11083694_854325614626079_6180463556130775462_o.jpg" type="image/png">
+			<link rel="shortcut icon" href="images/icon.png" type="image/png">
 		</noscript>
 	</head>
 	<body id="top">

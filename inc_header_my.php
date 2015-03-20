@@ -36,6 +36,7 @@ if (!isset($_SESSION["sn_idx"])) {
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
+			<link rel="shortcut icon" href="images/icon.png" type="image/png">
 		</noscript>
 	</head>
 	<body id="top">
