@@ -145,7 +145,7 @@
 			   showOn: "both", 
 			   yearRange: 'c-99:c+99', 
 			   maxDate: '+1y', 
-			   minDate: '-1y'
+			   minDate: '-0d'
 			  };
 			  $("#cDate").datepicker(clareCalendar);
 			  $("img.ui-datepicker-trigger").attr("style","margin-left:5px; vertical-align:middle; cursor:pointer;"); 
