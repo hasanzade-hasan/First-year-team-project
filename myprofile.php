@@ -34,6 +34,8 @@
 			if(!is_numeric($TargetWeight)){
 				echo "<script>alert('Only numeric values are allowed');location.href='myprofile.php';</script>";
 				exit;
+;
+visual
 			}
 			if($TargetWeight > $_SESSION["sn_weight"]){
 				echo "<script>alert('Target weight should be less than the current weight');location.href='myprofile.php';</script>";
@@ -56,7 +58,7 @@
                 if($mode == "DeleteDiet") {
 			$res = mysqli_query( $conn, "delete from Diet where UserID = '" . $_SESSION["sn_idx"] . "'");
 			if ($res) {
-				echo "<script>alert('Set a new goal')location.href='myprofile.php'</script>";
+				echo "<script>alert('Set a new goal');location.href='myprofile.php'</script>";
 			}else {
 				echo "<script>alert('error');location.href='myprofile.php';</script>";
       			}
@@ -128,7 +130,7 @@
 							<ul style="list-style: none;">
 								<?php
 								$Diet_info = getdata("select * from Diet where UserID='" . $_SESSION["sn_idx"] . "'" , $conn );
-                                                                if ( $Diet_info["TargetWeight"] > $_SESSION["sn_weight"]){								   
+                                                                if ( $Diet_info["TargetWeight"] >= $_SESSION["sn_weight"]){								   
 									echo "You have reached your goal<br />";?>
 							
 								        <form id="upWeight" name='frm_regist' method="POST" action="myprofile.php">
