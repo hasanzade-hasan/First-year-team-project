@@ -27,7 +27,7 @@
 				<div id="listfoods">
 					<h1><u> List of foods </u></h1>
 					
-							<ul>
+							<ul style="list-style: none;">
 								<?php 
 									$sql="select * from Food order by Name ASC";
 									$result=mysqli_query( $conn, $sql ) OR die(__FILE__." : Line ".__LINE__."<p>".mysql_error());
@@ -111,7 +111,7 @@
 							</table>
 				</div>
 				<div id = "total">
-					<p> Total ammount of calories:<span id="TotalAmmount"><?php echo number_format( $cal_total);?></span> Kcal</p>
+					<p> Total amount of calories:<span id="TotalAmmount"><?php echo number_format( $cal_total);?></span> Kcal</p>
 						<select name="Meal" class="form-controll" style="border:1px solid #ccc;padding2%;height:1.75em;width:200px;" id="Meal">
 							<option value="" <?php if ( $rm == "" ) { echo " selected"; }?>>- MEAL -</option>
 							<option value="B" <?php if ( $rm == "B" ) { echo " selected"; }?>>Breakfast</option>

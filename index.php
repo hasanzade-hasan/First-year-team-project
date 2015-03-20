@@ -118,7 +118,7 @@ include "./config/query.php";
 						
 						<img src="images/diet.jpg" width ="100%">
 						<h3>PLAN YOUR DIET</h3>
-						<p>Manage your diet in one convenient space with our calendar function. YOu can add food and exercises to your timetable and design your own weight loss strategy.</p>
+						<p>Manage your diet in one convenient space with our calendar function. You can add food and exercises to your timetable and design your own weight loss strategy.</p>
 					</div>
 					<div id="box">
 						<img src="images/work.jpg" width ="100%">

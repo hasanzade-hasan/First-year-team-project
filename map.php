@@ -52,7 +52,7 @@
 					
 						<table>
 						  <thead>
-						    <tr><th colspan="3">Some facilities here</th></tr>
+						    <tr><th colspan="3">FACILITIES</th></tr>
 						  </thead>
 						  <tbody>
 						    <tr>
