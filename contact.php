@@ -12,13 +12,13 @@
 						
 
 						<img class="boxImg" src="images/ColmContactPhoto.jpg" width ="100%">
-						<h3>Colm Mallom </h3>
+						<h3>Colm Mallon </h3>
 						<p>Hi my name is Colm Mallon. I am a Computer Science Masters student at the University of Manchester. I am currently a first year on the program. I have 4 years programming experience with Java, python, vb.net, ARM and PASCAL programming languages all included.</p>
 					</div>
 					<div id="box">
 						<img class="boxImg" src="images/RobertoContactPhoto.jpg" width ="100%">
 						<h3>Roberto-Paul Malutan</h3>
-						<p>Hi, I'm Roberto! I'm a student at the University of Manchester's Computer Science School. Alongside with football, programming is my greatest passion, which is the reason I chose to work on the frontend side of the website. Should you have any enquiries do not hesitate to contact me at <br>roberto.malutan@student.manchester.ac.uk <br> or on my phone 07511 481 676 </p>
+						<p>Hi, I'm Roberto! I'm a student at the UoM's Computer Science School. Alongside with football, programming is my greatest passion, which is the reason I chose to work on the frontend side of the website. Should you have any enquiries do not hesitate to contact me at <br>roberto.malutan@student.manchester.ac.uk <br> or on my phone 07511 481 676 </p>
 						</div>
 					<div id="box">
 						<img class="boxImg" src="images/CrisContactPhoto.jpg" width ="100%">
