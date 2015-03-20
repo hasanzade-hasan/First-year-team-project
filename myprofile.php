@@ -58,7 +58,7 @@ visual
                 if($mode == "DeleteDiet") {
 			$res = mysqli_query( $conn, "delete from Diet where UserID = '" . $_SESSION["sn_idx"] . "'");
 			if ($res) {
-				echo "<script>alert('Set a new goal');location.href='myprofile.php'</script>";
+				echo "<script>alert('Set a new goal');location.href='myprofile.php';</script>";
 			}else {
 				echo "<script>alert('error');location.href='myprofile.php';</script>";
       			}
