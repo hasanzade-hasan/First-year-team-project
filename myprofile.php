@@ -34,8 +34,7 @@
 			if(!is_numeric($TargetWeight)){
 				echo "<script>alert('Only numeric values are allowed');location.href='myprofile.php';</script>";
 				exit;
-;
-visual
+
 			}
 			if($TargetWeight > $_SESSION["sn_weight"]){
 				echo "<script>alert('Target weight should be less than the current weight');location.href='myprofile.php';</script>";
