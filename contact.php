@@ -32,9 +32,9 @@
 						<p>Nullam quis eleifend lectus. Suspendisse et lacus placerat, suscipit erat id, ullamcorper nisl. Maecenas gravida dictum fringilla. Phasellus lobortis, felis id accumsan condimentum, magna erat malesuada ligula, quis egestas urna nisl nec velit. Etiam at metus sit amet ex feugiat tincidunt.</p>
 					</div>
 					<div id="box">
-						<img class="boxImg" src="images/work.jpg" width ="100%">
+						<img class="boxImg" src="images/Eun.jpg" width ="100%">
 						<h3>Dongeun Seo </h3>
-						<p>Nullam quis eleifend lectus. Suspendisse et lacus placerat, suscipit erat id, ullamcorper nisl. Maecenas gravida dictum fringilla. Phasellus lobortis, felis id accumsan condimentum, magna erat malesuada ligula, quis egestas urna nisl nec velit. Etiam at metus sit amet ex feugiat tincidunt.</p>
+						<p>Hello, I am Dongeun Seo. I have managed PHP and some other languages on this website. Whenever you find an erron with regard to functionality, contact me please.<br>dong.seo@student.manchester.ac.uk</p>
 						</div>
 					<div id="box">
 						<img class="boxImg" src="images/ulrichContactPhoto.jpg" width ="100%">
