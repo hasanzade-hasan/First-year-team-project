@@ -227,4 +227,5 @@
 			//-->
 			</script>
 			<?php include "./inc_footer.php"; ?>
-               
+	</body>
+</html>               
