@@ -31,7 +31,7 @@
 			exit;
 		}
 		if ($mode == "DietStart" ) {
-			if(!is_numberic($TargetWeight)){
+			if(!is_numeric($TargetWeight)){
 				echo "<script>alert('Only numeric values are allowed');location.href='myprofile.php';</script>";
 				exit;
 			}
