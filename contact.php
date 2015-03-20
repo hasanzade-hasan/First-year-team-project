@@ -11,19 +11,19 @@
 					<div id="box">
 						
 
-						<img class="boxImg" src="images/Colm.jpg" width ="100%">
+						<img class="boxImg" src="images/ColmContactPhoto.jpg" width ="100%">
 						<h3>Colm Mallom </h3>
 						<p>Hi my name is Colm Mallon. I am a Computer Science Masters student at the University of Manchester. I am currently a first year on the program. I have 4 years programming experience with Java, python, vb.net, ARM and PASCAL programming languages all included.</p>
 					</div>
 					<div id="box">
-						<img class="boxImg" src="images/work.jpg" width ="100%">
+						<img class="boxImg" src="images/RobertoContactPhoto.jpg" width ="100%">
 						<h3>Roberto-Paul Malutan</h3>
-						<p>Nullam quis eleifend lectus. Suspendisse et lacus placerat, suscipit erat id, ullamcorper nisl. Maecenas gravida dictum fringilla. Phasellus lobortis, felis id accumsan condimentum, magna erat malesuada ligula, quis egestas urna nisl nec velit. Etiam at metus sit amet ex feugiat tincidunt.</p>
+						<p>Hi, I'm Roberto! I'm a student at the University of Manchester's Computer Science School. Alongside with football, programming is my greatest passion, which is the reason I chose to work on the frontend side of the website. Should you have any enquiries do not hesitate to contact me at <br>roberto.malutan@student.manchester.ac.uk <br> or on my phone 07511 481 676 </p>
 						</div>
 					<div id="box">
 						<img class="boxImg" src="images/CrisContactPhoto.jpg" width ="100%">
 						<h3>Cristian Brisan</h3>
-						<p>Hi, I am Cris! I, along with Colm and Dong, am in charge of the backend side of our website. This means that whenever you have any complaints or suggestions about the data we have provided you on foods, diets or exercises it's me you should talk to :). My email is: cristian.brisan@student.manchester.ac.uk </p>
+						<p>Hi, I am Cris! I, along with Colm and Dong, am in charge of the backend side of our website. This means that whenever you have any complaints or suggestions about the data we have provided you on foods, diets or exercises it's me you should talk to :). <br>My email is: cristian.brisan@student.manchester.ac.uk </p>
 					</div>
 					<div id="box">
 						
@@ -34,7 +34,7 @@
 					<div id="box">
 						<img class="boxImg" src="images/Eun.jpg" width ="100%">
 						<h3>Dongeun Seo </h3>
-						<p>Hello, I am Dongeun Seo. I have managed PHP and some other languages on this website. Whenever you find an erron with regard to functionality, contact me please.<br>dong.seo@student.manchester.ac.uk</p>
+						<p>Hello, I am Dongeun Seo. I have managed PHP and some other languages on this website. Whenever you find an error with regard to functionality, contact me please.<br>dong.seo@student.manchester.ac.uk</p>
 						</div>
 					<div id="box">
 						<img class="boxImg" src="images/ulrichContactPhoto.jpg" width ="100%">
