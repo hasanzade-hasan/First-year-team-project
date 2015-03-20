@@ -1,7 +1,19 @@
 		<?php
 		$page_title = "MY Profile";
 		$page_id = "1";
-		include "./inc_header_my.php"; 		
+		include "./inc_header_my.php"; 
+
+		if (isset($_COOKIE["sn_today_exercise"] ) ) {
+			$today_exercise = $_COOKIE["sn_today_exercise"];
+		}else {
+			$today_exercise = "";
+		}
+		if ( isset( $_COOKIE["sn_today_recipe"] ) ) {
+			$today_recipe = $_COOKIE["sn_today_recipe"];
+		}else {
+			$today_recipe = "";
+		}
+	
 		if ($_SESSION["sn_idx"] == "" ) {
 			echo "<script>alert('First, you need to log in.');location.href='/';</script>";
 			exit;
@@ -159,7 +171,14 @@
 						<div id="box2">
 							<h1> exercise of the day </h1>									
 							<?php
-								$row=getdata(	"select * from ExercisesTable order by rand() limit 0 , 1 " , $conn);
+								
+								if ($today_exercise) {
+										$row = getdata(	"select * from ExercisesTable where ExerciseID=" . $today_exercise , $conn);
+								}else {
+										$row = getdata(	"select * from ExercisesTable order by rand() limit 0 , 1 " , $conn);
+										setcookie("sn_today_exercise", $row["ExerciseID"] , strtotime('today 23:59'), "/");
+								}
+
 								$Photo = "";
 								$media_height=210;
 								$media_width=354;
