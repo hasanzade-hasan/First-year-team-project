@@ -130,6 +130,11 @@
 
 			<script type="text/javascript">
 			<!--
+			 var cal_total = <?php echo $cal_total;?>
+			
+			 if ( cal_total > 0 ) {
+ 				 document.form2.totalCal.value=cal_total;
+			 }
 
 			 $(document).ready(function() {
 			  var clareCalendar = {
@@ -171,6 +176,14 @@
 				var nChk = document.getElementsByName("Food_list");  
 				var mChk = document.getElementsByName("Portion");  
 				form.gid.value ='';
+
+				if (isNaN(document.getElementById("Portion_list_"+val).value) ) {
+ 				       	  alert("Enter numbers only");
+					  document.getElementById("Portion_list_"+val).value="";
+					  return false; 
+				}
+
+
 				if(nChk){
 					for(i=0;i<nChk.length;i++) { 
 						if(nChk[i].checked){  
@@ -196,9 +209,9 @@
 						'./calculator_.php', true, true
 					);
 
-					 if(form.gid.value ==''){
-                                                alert("list is empty");
-                                                return false;
+					if(form.gid.value ==''){
+                                              alert("list is empty");
+                                              return false;
                                         }
 
 				}
@@ -220,9 +233,31 @@
 					}else if ( frm.cDate1.value == "" ) {
 						alert("Choose Date");
 						return false;
-					}else 
+					}else{
+						document.form2.submit();
 					
-					document.form2.submit();
+						
+						if(nChk){
+							for(i=0;i<nChk.length;i++) { 
+								if(nChk[i].checked){  
+									if (mChk[i].value=='')	{
+										mValue = '0';
+									}else {
+										mValue = mChk[i].value;
+									}
+									if(frm.gid.value ==''){
+										frm.gid.value = nChk[i].value+'|^|'+mValue;
+									}else{
+										frm.gid.value =  frm.gid.value+ ',' +nChk[i].value+'|^|'+mValue;
+									}
+								}
+							}
+							if(frm.gid.value ==''){ 
+								alert("list is empty");       
+								return false; 
+							}
+						}
+					}
 				}
 			//-->
 			</script>
