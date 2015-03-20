@@ -166,7 +166,6 @@ include "./config/query.php";
 					var pass1 = document.frm_regist.pass1.value;
 					var pass2 = document.frm_regist.pass2.value;
 					var mode = document.frm_regist.mode.value;
-					alert( gender);
 					sendRequest(
 						regist_result, '&email='+ email + '&pass1=' + pass1 + '&pass2=' + pass2 + '&mode=' + mode + '&rname=' + rname + '&surname=' + surname + '&gender=' + gender + '&weight=' + weight + '&height=' + height + '&mode=' + mode,
 						'POST',
