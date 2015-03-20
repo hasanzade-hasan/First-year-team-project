@@ -27,9 +27,9 @@
 					</div>
 					<div id="box">
 						
-						<img class="boxImg" src="images/salad.jpg" width ="100%">
+						<img class="boxImg" src="images/Hasan.jpg" width ="100%">
 						<h3>Hasan Hasanzade </h3>
-						<p>Nullam quis eleifend lectus. Suspendisse et lacus placerat, suscipit erat id, ullamcorper nisl. Maecenas gravida dictum fringilla. Phasellus lobortis, felis id accumsan condimentum, magna erat malesuada ligula, quis egestas urna nisl nec velit. Etiam at metus sit amet ex feugiat tincidunt.</p>
+						<p>Hello, I am Hasan. I was working on this project with six guys you see here. I did front-end part of this website together with Roberto and Ulrich. I am not sure this is perfect design, if you have any suggestions email me here: hasan.hasanzade@student.manchester.ac.uk</p>
 					</div>
 					<div id="box">
 						<img class="boxImg" src="images/Eun.jpg" width ="100%">
