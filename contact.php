@@ -23,7 +23,7 @@
 					<div id="box">
 						<img class="boxImg" src="images/CrisContactPhoto.jpg" width ="100%">
 						<h3>Cristian Brisan</h3>
-						<p>Hi, I am Cris! I, along with Colm and Dong, am in charge of the backend side of our website. This means that whenever you have complaints or suggestions about the data we have provided you on foods, diets or exercises it's me you should talk to. <br>My email is: <em>cristian.brisan@student.manchester.ac.uk </em></p>
+						<p>Hi, I am Cris! I, along with Colm and Dong, am in charge of the backend side of our website. This means that if you have complaints or suggestions about the data we have provided you on foods, diets or exercises it's me you should talk to. <br>My email is: <em>cristian.brisan@student.manchester.ac.uk </em></p>
 					</div>
 					<div id="box">
 						
