@@ -197,7 +197,14 @@
 						<div id="box2l">
 								<h1> Recipe of the day </h1>										
 								<?php
-									$row=getdata(	"select * from RecipeName order by rand() limit 0 , 1 " , $conn);
+									if ($today_recipe) {
+                                                                                $row = getdata( "select * from RecipeName where RecipeID=" . $today_recipe , $conn);
+                                                                }else {
+                                                                                $row = getdata( "select * from RecipeName order by rand() limit 0 , 1 " , $conn);
+                                                                                setcookie("sn_today_recipe", $row["RecipeID"] , strtotime('today 23:59'), "/");
+                                                                }
+
+									//$row=getdata(	"select * from RecipeName order by rand() limit 0 , 1 " , $conn);
 									$Photo = "";
 									if (file_exists("./images/recipe/" . $row["Photo"] . "")) { 
 										$Photo = "<img src=\"./images/recipe/" . $row["Photo"] . "\" style='width:80%;'>"; 
