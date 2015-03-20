@@ -13,17 +13,17 @@
 
 						<img class="boxImg" src="images/ColmContactPhoto.jpg" width ="100%">
 						<h3>Colm Mallon </h3>
-						<p>Hi my name is Colm Mallon. I am a Computer Science Masters student at the University of Manchester. I am currently a first year on the program. I have 4 years programming experience with Java, python, vb.net, ARM and PASCAL programming languages all included.<em>colm.mallon@student.manchester.ac.uk</em></p>
+						<p>Hi my name is Colm Mallon. I am a Computer Science Masters student at the University of Manchester. I am currently a first year on the program. I have 4 years programming experience with Java, python, vb.net, ARM and PASCAL programming languages all included.<br><em>colm.mallon@student.manchester.ac.uk</em></br></p>
 					</div>
 					<div id="box">
 						<img class="boxImg" src="images/RobertoContactPhoto.jpg" width ="100%">
 						<h3>Roberto-Paul Malutan</h3>
-						<p>Hi, I'm Roberto! I'm a student at the University of Manchester's Computer Science School. Alongside with football, programming is my greatest passion, which is the reason I chose to work on the frontend side of the website. Should you have any enquiries do not hesitate to contact me at <br><em>roberto.malutan@student.manchester.ac.uk</em> <br> or on my phone 07511 481 676 </p>
+						<p>Hi, I'm Roberto! I'm a student at the University of Manchester's Computer Science School. Alongside with football, programming is my greatest passion, which is the reason I chose to work on the frontend side of the website. Should you have any enquiries do not hesitate to contact me at 07511 481 676 or email me: <br><em>roberto.malutan@student.manchester.ac.uk</em> <br></p>
 						</div>
 					<div id="box">
 						<img class="boxImg" src="images/CrisContactPhoto.jpg" width ="100%">
 						<h3>Cristian Brisan</h3>
-						<p>Hi, I am Cris! I, along with Colm and Dong, am in charge of the backend side of our website. This means that whenever you have any complaints or suggestions about the data we have provided you on foods, diets or exercises it's me you should talk to :). <br>My email is: <em>cristian.brisan@student.manchester.ac.uk </em></p>
+						<p>Hi, I am Cris! I, along with Colm and Dong, am in charge of the backend side of our website. This means that whenever you have complaints or suggestions about the data we have provided you on foods, diets or exercises it's me you should talk to. <br>My email is: <em>cristian.brisan@student.manchester.ac.uk </em></p>
 					</div>
 					<div id="box">
 						
