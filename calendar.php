@@ -58,6 +58,8 @@
 		  padding: 3px 5px;
 		  position: relative;
 		  text-shadow: 0 1px 0 #000;  
+		  text-align: center !important;
+  		padding-top: 10px !important;
 		}
 
 		th:first-child {
@@ -141,7 +143,7 @@
           <th>LUNCH</th>
           <th>DINNER</th>
           <th>EXERCISE</th>
-          <th>Total calorie</th>
+          <th>TOTAL CALORIES</th>
         </tr>
       </thead>
       
