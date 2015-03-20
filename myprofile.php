@@ -131,7 +131,7 @@
                                                                 if ( $Diet_info["TargetWeight"] > $_SESSION["sn_weight"]){								   
 									echo "You have reached your goal<br />";?>
 							
-								        <form name='frm_regist' method="POST" action="myprofile.php">
+								        <form id="upWeight" name='frm_regist' method="POST" action="myprofile.php">
                                                                         <input type="hidden" name="mode" value="DeleteDiet">
 									<input type="submit" value="Set a new goal" />
 									</form>
